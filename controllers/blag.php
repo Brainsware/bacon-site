@@ -8,7 +8,8 @@ class Blag extends Application
 {
 	public function index ()
 	{
-		$this->entries = Model\Blag::select(array('title', 'content'))->order('created', 'DESC');
+		#$this->entries = Model\Blag::select(array('title', 'content'))->order('created', 'DESC');
+		
 	}
 
 	public function show ($id)

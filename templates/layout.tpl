@@ -12,12 +12,12 @@
 	<body>
 	    <div id="container">
 	        <div id="header" class="row">
-	            <img src="baconphp.png" alt="bacon PHP" />
+	            <img src="{{ bacon_images_path }}baconphp.png" alt="bacon PHP" />
 	        </div>
 	        <div id="navbar">
                 <span><a href="">News/About</a></span>
                 <span><a href="">How do I do ..?</a></span>
-                <span><a href="">Contribute</a></span>
+                <span><a href="">Download/Contribute</a></span>
             </div>
 
             <div id="content" class="row">
@@ -29,7 +29,7 @@
 		</div>
 
 		<div id="footer">
-		    bacon PHP brought to you by <a href="http://brainsware.org">brainsware</a>
+		    bacon PHP brought to you by <a href="http://brainsware.org">brainsware</a> | <a href="http://brainsware.org/imprint.html">Imprint/Impressum</a>
 		</div>
 	</body>
 </html>
