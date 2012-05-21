@@ -5,6 +5,7 @@
         <title>{{ bacon_title }}{% block subtitle %}{% endblock %}</title>
 
 {% block header %}
+        <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="{{ bacon_styles_path }}1140.css" />
         <link rel="stylesheet" type="text/css" href="{{ bacon_styles_path }}bacon.css" />
 {% endblock %}
@@ -29,7 +30,7 @@
 		</div>
 
 		<div id="footer">
-		    bacon PHP brought to you by <a href="http://brainsware.org">brainsware</a> | <a href="http://brainsware.org/imprint.html">Imprint/Impressum</a>
+		    bacon PHP is brought to you by <a href="http://brainsware.org">brainsware</a> | <a href="http://brainsware.org/imprint.html">Imprint/Impressum</a>
 		</div>
 	</body>
 </html>
