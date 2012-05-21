@@ -1,0 +1,36 @@
+@import url('opensans/stylesheet.css');
+
+html, body {
+	font-family: "OpenSans";
+	height: 100%;
+}
+
+#container {
+	min-height: 100%;
+	margin: 0 auto -30px;
+}
+#footer, #push {
+	height: 30px;
+	clear: both;
+}
+
+#header, #footer {
+	text-align: center;
+}
+
+#navbar {
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	background-color: #892A33;
+	padding: 10px;
+	text-align: center;
+}
+
+#navbar a {
+	color: white;
+	padding: 0px 10px;
+}
+
+#content {
+	margin-top: 20px;
+}
