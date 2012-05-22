@@ -17,7 +17,7 @@ class Base
 	public static $support_mail = 'support@domain.tld';
 	public static $session_key = 'massivebacon';
 	
-	public static $base_uri = 'http://212.17.66.110/bw%20svn/bacon-site/trunk/htdocs/';
+	public static $base_uri = 'http://beta.baconphp.net/';
 	# Generate URIs with or without index.php (use true when you don't have or
 	# want FallbackResource)
 

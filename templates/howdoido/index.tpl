@@ -31,6 +31,31 @@
 		        <li>PHP 5.3.0 or greater</li>
 		        <li>A database (optional)</li>
 		    </ul>
+        <p>Here's the general directory layout:</p>
+        <div class="code">/base
+/config
+/controllers
+/htdocs
+/lib
+/logs
+/models
+/templates</div>
 	    </div>
+      <div id="blog">
+        <h2>.. the blog module</h2>
+        <p></p>
+        <div id="blog-model">
+          <h3>.. the model</h3>
+          <p></p>
+        </div>
+        <div id="blog-controller">
+          <h3>.. the controller</h3>
+          <p></p>
+        </div>
+        <div id="blog-templates">
+          <h3>.. the templates</h3>
+          <p></p>
+        </div>
+      </div>
 	</div>
 {% endblock %}

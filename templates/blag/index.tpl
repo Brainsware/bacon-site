@@ -3,7 +3,7 @@
 		<div class="content">
 		    <h1>Got bacon?</h1>
 		    <p>The bacon PHP framework is a lean, clean, simple and fast MVC framework without too much fuzz about it.</p>
-		    <p>To get started as quickly as possible we have set up a <a href="">'How do I do ..?'</a> section for you. If you want to know how to work with bacon, you should definitely take a look!</p>
+		    <p>To get started as quickly as possible we have set up a <a href="/howdoido/">'How do I do ..?'</a> section for you. If you want to know how to work with bacon, you should definitely take a look!</p>
 		    <p>An extensive API documentation will follow some time later.</p>
 	    </div>
 	</div>

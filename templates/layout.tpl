@@ -16,8 +16,8 @@
 	            <img src="{{ bacon_images_path }}baconphp.png" alt="bacon PHP" />
 	        </div>
 	        <div id="navbar">
-                <span><a href="">News/About</a></span>
-                <span><a href="">How do I do ..?</a></span>
+                <span><a href="/blag/">News/About</a></span>
+                <span><a href="/howdoido/">How do I do ..?</a></span>
                 <span><a href="">Download/Contribute</a></span>
             </div>
 

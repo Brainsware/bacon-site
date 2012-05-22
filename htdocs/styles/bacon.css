@@ -5,7 +5,7 @@ html, body {
 	height: 100%;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Chelsea Market';
 }
 
@@ -16,6 +16,9 @@ h1, h2 {
 #footer, #push {
 	height: 30px;
 	clear: both;
+}
+#push {
+  height: 60px;
 }
 
 #header, #footer {
@@ -58,6 +61,15 @@ h1, h2 {
 	margin-bottom: 0.5em;
 }
 
+.code {
+	border: 1px solid #FFCCCC;
+  border-radius: 5px;
+  padding: 5px;
+  font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+	background-color: #FFF0F0;
+  white-space: pre-wrap;
+}
+
 #about {
 	border: 1px solid #ADD9AD;
 	border-top: none;
@@ -68,12 +80,12 @@ h1, h2 {
 }
 
 #download {
-    border: 1px solid #FFCCCC;
+	border: 1px solid #FFCCCC;
 	border-top: none;
 	border-bottom: none;
 	background-color: #FFF0F0;
 	border-radius: 10px;
-	max-width: 256px;
+	max-width: 250px;
 }
 
 #download {
@@ -119,13 +131,20 @@ h1, h2 {
 	margin-bottom: 0.5em;
 }
 
+#howdoido h2 {
+  margin: 0.5em 0px;
+}
+
 #toc {
 	position: fixed;
 	max-width: 190px;
-	border-right: 2px dotted #ADD9AD;
+	border-right: 2px solid #ADD9AD;
 	border-radius: 10px;
 	background-color: #E9FFE9;
 }
-#toc ol, #toc ul {
+#toc ol, ul {
 	padding-left: 20px;
+}
+#toc li {
+  margin-bottom: 0.1em;
 }
