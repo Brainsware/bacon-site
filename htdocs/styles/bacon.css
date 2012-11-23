@@ -1,150 +1,66 @@
 @import url('opensans/stylesheet.css');
 
-html, body {
-	font-family: "OpenSans";
-	height: 100%;
+body {
+  font-family: 'OpenSans';
+  color: #111;
 }
 
-h1, h2, h3 {
-    font-family: 'Chelsea Market';
+p {
+  margin-bottom: 1em;
+
+  font-size: 1.15em;
+  line-height: 1.5em;
+  text-align: justify;
 }
 
-#container {
-	min-height: 100%;
-	margin: 0 auto -41px;
-}
-#footer, #push {
-	height: 30px;
-	clear: both;
-}
-#push {
-  height: 60px;
+p.hero {
+  background-color: #eaeaea;
+  padding: 1em;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-#header, #footer {
-	text-align: center;
+a {
+  color: #88513D;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0.4em 0 0.2em 0;
+}
+
+h2 {
+  margin: 0.4em 0 0.2em 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.push {
+  margin-top: 1.5em;
 }
 
 #navbar {
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
-	background-color: #892A33;
-	padding: 10px;
-	text-align: center;
-}
+  padding: 10px;
 
-#footer {
-	border-top: 1px solid black;
-	padding-top: 10px;
-	background-color: #892A33;
-}
-
-#footer a {
-	color: white;
-}
-
-#content a {
-	color: #892A33;
+  border-bottom: 1px solid gray;
 }
 
 #navbar a {
-	color: white;
-	padding: 0px 10px;
+  font-weight: bold;
+
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-#content {
-	margin-top: 20px;
-	text-align: justify;
+#footer {
+  padding: 10px;
+
+  border-top: 1px solid gray;
 }
 
-#content p {
-	margin-bottom: 0.5em;
-}
-
-.code {
-	border: 1px solid #FFCCCC;
-  border-radius: 5px;
-  padding: 5px;
-  font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
-	background-color: #FFF0F0;
-  white-space: pre-wrap;
-}
-
-#about {
-	border: 1px solid #ADD9AD;
-	border-top: none;
-	border-bottom: none;
-	background-color: #E9FFE9;
-	border-radius: 10px;
-	margin-bottom: 1em;
-}
-
-#download {
-	border: 1px solid #FFCCCC;
-	border-top: none;
-	border-bottom: none;
-	background-color: #FFF0F0;
-	border-radius: 10px;
-	max-width: 250px;
-}
-
-#download {
-	font-size: 11pt;
-}
-#download .date {
-	font-size: 10pt;
-}
-#download .version {
-	font-weight: bold;
-}
-#download h2 {
-	margin-bottom: 5px;
-}
-
-.content {
-	padding: 10px;
-}
-
-#content article header {
-	border-bottom: 1px dotted #e0e0e0;
-	margin: 5px 0px;
-	padding-bottom: 5px;
-	float: left;
-	width: 100%;
-}
-#content article header h2 {
-	float: left;
-}
-#content article header p {
-	float: right;
-	color: #909090;
-	font-style: italic;
-	font-size: 10pt;
-	margin-top: 1em;
-}
-
-#howdoido {
-	float: right;
-}
-
-#howdoido h1 {
-	margin-bottom: 0.5em;
-}
-
-#howdoido h2 {
-  margin: 0.5em 0px;
-}
-
-#toc {
-	position: fixed;
-	max-width: 190px;
-	border-right: 2px solid #ADD9AD;
-	border-radius: 10px;
-	background-color: #E9FFE9;
-}
-#toc ol, ul {
-	padding-left: 20px;
-}
-#toc li {
-  margin-bottom: 0.1em;
+#footer p {
+  font-size: 0.9em;
 }
