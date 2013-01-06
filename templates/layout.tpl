@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-    <title></title>
-    <title>{{ bacon_title }}{% block subtitle %}{% endblock %}</title>
+    <title>The Bacon PHP Framework {% block subtitle %}{% endblock %}</title>
 
     {% block header %}
     <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
@@ -22,7 +21,7 @@
           <span><a href="/about">About</a></span>
           <span><a href="/news">News</a></span>
           <span><a href="/documentation">Documentation</a></span>
-          <span><a href="/howdoi/">How do I ..?</a></span>
+          <span><a href="/howdoido/">How do I ..?</a></span>
           <span><a href="/download">Download</a></span>
           <span><a href="/contribute">Contribute</a></span>
         </div>
@@ -30,12 +29,15 @@
         <div class="onecol last"><!-- --></div>
       </div>
 
+      <div class="row">
       {% block content %}
       {% endblock %}
+      </div>
+
       <div class="push"></div>
     </div>
 
-    <div class="row">
+    <div class="row footer">
       <div class="onecol"><!-- --></div>
       <div class="tencol" id="footer">
         <p class="center">

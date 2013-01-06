@@ -1,5 +1,13 @@
 @import url('opensans/stylesheet.css');
 
+html, body {
+  height: 100%;
+}
+
+#container {
+  min-height: 100%;
+}
+
 body {
   font-family: 'OpenSans';
   color: #111;
@@ -42,10 +50,14 @@ h2 {
   margin-top: 1.5em;
 }
 
+#header {
+  padding-top: 10px;
+}
+
 #navbar {
   padding: 10px;
 
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 #navbar a {
@@ -55,10 +67,18 @@ h2 {
   padding-right: 15px;
 }
 
-#footer {
-  padding: 10px;
+.footer {
+  position: relative;
+  margin-top: -101px;
+  height: 77px;
+  clear: both;
+  padding-top: 0px;
+}
 
-  border-top: 1px solid gray;
+#footer {
+  border-top: 1px solid #e5e5e5;
+
+  padding: 10px;
 }
 
 #footer p {

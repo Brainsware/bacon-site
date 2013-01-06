@@ -27,8 +27,8 @@
 		    <h2>.. the installation</h2>
 		    <p>Before getting all up in that bacon, here are the server requirements:</p>
 		    <ul>
-		        <li>A webserver</li>
-		        <li>PHP 5.3.0 or greater</li>
+		        <li>PHP 5.4.0 or greater</li>
+		        <li>A webserver (optional if using the PHP server)</li>
 		        <li>A database (optional)</li>
 		    </ul>
         <p>Here's the general directory layout:</p>
