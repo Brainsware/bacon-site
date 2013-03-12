@@ -2,23 +2,26 @@
 
 namespace Config;
 
-$base = array(
-	'timezone'        => 'UTC',
-	'base_uri'        => '',
-	'base_controller' => 'blag',
+class Base
+{
+	public static $app = [
+		'timezone'        => 'UTC',
+		'base_uri'        => '',
+		'fallback'        => 'blag'
+	];
 
-	'session' => array(
+	public static $session = [
 		'timeout'           => 86400,
 		'regeneration_time' => 3600,
 		'key'               => 'bacon!',
 		'session_handler'   => 'files'
-	),
+	];
 
-	'logs' => array(
+	public static $logging = [
 		'level'  => 'info',
 		'debug'  => 'screen',
 		'driver' => 'syslog'
-	)
-);
+	];
+}
 
 ?>

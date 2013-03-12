@@ -4,6 +4,8 @@
  * @subpackage Blag
  */
 
+namespace Controllers;
+
 class Blag extends Application
 {
 	public function index ()

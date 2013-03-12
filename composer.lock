@@ -1,0 +1,258 @@
+{
+    "hash": "95c5535275c982737d0993e24a2bfd69",
+    "packages": [
+        {
+            "name": "brainsware/bacon",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Brainsware/bacon.git",
+                "reference": "21d51bdde2f810abe2bb6247fedeb1ba5d45a0d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Brainsware/bacon/zipball/21d51bdde2f810abe2bb6247fedeb1ba5d45a0d3",
+                "reference": "21d51bdde2f810abe2bb6247fedeb1ba5d45a0d3",
+                "shasum": ""
+            },
+            "require": {
+                "brainsware/sauce": "dev-master",
+                "dflydev/markdown": "dev-master",
+                "minmb/phpmailer": "dev-master",
+                "php": ">= 5.4.0",
+                "twig/twig": "dev-master"
+            },
+            "bin": [
+                "bin/server",
+                "bin/coffee-compile"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bacon": "lib/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Alexander Pánek",
+                    "email": "a.panek@brainsware.org"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/Brainsware/bacon/tree/master",
+                "issues": "https://github.com/Brainsware/bacon/issues"
+            },
+            "time": "2013-03-08 16:26:05"
+        },
+        {
+            "name": "brainsware/sauce",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Brainsware/sauce.git",
+                "reference": "20621a8b725856ab6d8bb539d0044cc8ff7e9121"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Brainsware/sauce/zipball/20621a8b725856ab6d8bb539d0044cc8ff7e9121",
+                "reference": "20621a8b725856ab6d8bb539d0044cc8ff7e9121",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">= 5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sauce": "lib/"
+                },
+                "files": [
+                    "lib/Sauce/functions.php"
+                ]
+            },
+            "authors": [
+                {
+                    "name": "Alexander Pánek",
+                    "email": "a.panek@brainsware.org"
+                },
+                {
+                    "name": "Daniel Khalil",
+                    "email": "d.khalil@brainsware.org"
+                },
+                {
+                    "name": "Igor Galić",
+                    "email": "i.galic@brainsware.org"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/Brainsware/sauce/tree/master",
+                "issues": "https://github.com/Brainsware/sauce/issues"
+            },
+            "time": "2013-03-08 16:23:19"
+        },
+        {
+            "name": "dflydev/markdown",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dflydev/dflydev-markdown.git",
+                "reference": "11f8faa2d17f717a038b4d372abd22a6ac4a15dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dflydev/dflydev-markdown/zipball/11f8faa2d17f717a038b4d372abd22a6ac4a15dc",
+                "reference": "11f8faa2d17f717a038b4d372abd22a6ac4a15dc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "dflydev\\markdown": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Dragonfly Development Inc.",
+                    "email": "info@dflydev.com",
+                    "homepage": "http://dflydev.com"
+                },
+                {
+                    "name": "Beau Simensen",
+                    "email": "beau@dflydev.com",
+                    "homepage": "http://beausimensen.com"
+                },
+                {
+                    "name": "Michel Fortin",
+                    "homepage": "http://michelf.com"
+                },
+                {
+                    "name": "John Gruber",
+                    "homepage": "http://daringfireball.net"
+                }
+            ],
+            "description": "PHP Markdown & Extra",
+            "homepage": "http://github.com/dflydev/dflydev-markdown",
+            "keywords": [
+                "markdown"
+            ],
+            "time": "2012-07-15 16:31:27"
+        },
+        {
+            "name": "minmb/phpmailer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/minmb/phpmailer.git",
+                "reference": "df443234ad0ca10cbf91a0c0a728b256afcab1d1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/minmb/phpmailer/zipball/df443234ad0ca10cbf91a0c0a728b256afcab1d1",
+                "reference": "df443234ad0ca10cbf91a0c0a728b256afcab1d1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "*",
+                "phpunit/phpunit": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class.phpmailer.php",
+                    "class.pop3.php",
+                    "class.smtp.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                }
+            ],
+            "description": "PHPMailer is a Full Featured Email Transfer Class for PHP",
+            "time": "2012-11-06 13:20:17"
+        },
+        {
+            "name": "twig/twig",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fabpot/Twig.git",
+                "reference": "b6c2171579b4ab8c193322796ef757a185729cb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/b6c2171579b4ab8c193322796ef757a185729cb8",
+                "reference": "b6c2171579b4ab8c193322796ef757a185729cb8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.12-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Twig_": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Armin Ronacher",
+                    "email": "armin.ronacher@active-4.com"
+                }
+            ],
+            "description": "Twig, the flexible, fast, and secure template language for PHP",
+            "homepage": "http://twig.sensiolabs.org",
+            "keywords": [
+                "templating"
+            ],
+            "time": "2013-03-07 06:57:14"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "brainsware/sauce": 20,
+        "brainsware/bacon": 20
+    },
+    "platform": {
+        "php": ">= 5.4.0"
+    },
+    "platform-dev": [
+
+    ]
+}
