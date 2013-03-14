@@ -1,7 +1,7 @@
 <?php
 
-require('../vendor/autoload.php');
+require 'vendor/autoload.php';
 
-require('../vendor/Brainsware/Bacon/Lib/boot.php');
+return require('vendor/brainsware/bacon/lib/boot.php');
 
 ?>

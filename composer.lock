@@ -1,5 +1,5 @@
 {
-    "hash": "f1b5e26fb7dd5de0f3273695922edb8d",
+    "hash": "15a0fb846638aed3b80e230c1f099933",
     "packages": [
         {
             "name": "brainsware/bacon",
@@ -16,7 +16,7 @@
                 "shasum": ""
             },
             "require": {
-                "brainsware/sauce": "dev-master",
+                "brainsware/sauce": "0.1.0",
                 "dflydev/markdown": "dev-master",
                 "minmb/phpmailer": "dev-master",
                 "php": ">= 5.4.0",
@@ -40,15 +40,23 @@
                 {
                     "name": "Alexander Pánek",
                     "email": "a.panek@brainsware.org"
+                },
+                {
+                    "name": "Daniel Khalil",
+                    "email": "d.khalil@brainsware.org"
+                },
+                {
+                    "name": "Igor Galić",
+                    "email": "i.galic@brainsware.org"
                 }
             ],
             "description": "Fast and scalable PHP MVC framework",
             "homepage": "http://baconphp.net",
-            "time": "2013-03-13 17:04:25"
+            "time": "2013-03-14 11:33:50"
         },
         {
             "name": "brainsware/sauce",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Brainsware/sauce.git",
