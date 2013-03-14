@@ -18,10 +18,9 @@
         <div class="onecol"><!-- --></div>
 
         <div class="tencol" id="navbar">
-          <span><a href="/about">About</a></span>
           <span><a href="/news">News</a></span>
-          <span><a href="/documentation">Documentation</a></span>
           <span><a href="/howdoido/">How do I ..?</a></span>
+          <span><a href="/sauce">Sauce</a></span>
           <span><a href="/download">Download</a></span>
           <span><a href="/contribute">Contribute</a></span>
         </div>

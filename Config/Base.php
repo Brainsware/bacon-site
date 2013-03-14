@@ -7,7 +7,7 @@ class Base
 	public static $app = [
 		'timezone'        => 'UTC',
 		'base_uri'        => '',
-		'fallback'        => 'Intro'
+		'fallback'        => 'blag'
 	];
 
 	public static $session = [
