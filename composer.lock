@@ -1,18 +1,18 @@
 {
-    "hash": "95c5535275c982737d0993e24a2bfd69",
+    "hash": "f1b5e26fb7dd5de0f3273695922edb8d",
     "packages": [
         {
             "name": "brainsware/bacon",
-            "version": "dev-master",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Brainsware/bacon.git",
-                "reference": "21d51bdde2f810abe2bb6247fedeb1ba5d45a0d3"
+                "reference": "0.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Brainsware/bacon/zipball/21d51bdde2f810abe2bb6247fedeb1ba5d45a0d3",
-                "reference": "21d51bdde2f810abe2bb6247fedeb1ba5d45a0d3",
+                "url": "https://api.github.com/repos/Brainsware/bacon/zipball/0.1.0",
+                "reference": "0.1.0",
                 "shasum": ""
             },
             "require": {
@@ -32,17 +32,19 @@
                     "Bacon": "lib/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
             "authors": [
                 {
                     "name": "Alexander Pánek",
                     "email": "a.panek@brainsware.org"
                 }
             ],
-            "support": {
-                "source": "https://github.com/Brainsware/bacon/tree/master",
-                "issues": "https://github.com/Brainsware/bacon/issues"
-            },
-            "time": "2013-03-08 16:26:05"
+            "description": "Fast and scalable PHP MVC framework",
+            "homepage": "http://baconphp.net",
+            "time": "2013-03-13 17:04:25"
         },
         {
             "name": "brainsware/sauce",
@@ -50,12 +52,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Brainsware/sauce.git",
-                "reference": "20621a8b725856ab6d8bb539d0044cc8ff7e9121"
+                "reference": "0.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Brainsware/sauce/zipball/20621a8b725856ab6d8bb539d0044cc8ff7e9121",
-                "reference": "20621a8b725856ab6d8bb539d0044cc8ff7e9121",
+                "url": "https://api.github.com/repos/Brainsware/sauce/zipball/0.1.0",
+                "reference": "0.1.0",
                 "shasum": ""
             },
             "require": {
@@ -70,6 +72,10 @@
                     "lib/Sauce/functions.php"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
             "authors": [
                 {
                     "name": "Alexander Pánek",
@@ -84,11 +90,7 @@
                     "email": "i.galic@brainsware.org"
                 }
             ],
-            "support": {
-                "source": "https://github.com/Brainsware/sauce/tree/master",
-                "issues": "https://github.com/Brainsware/sauce/issues"
-            },
-            "time": "2013-03-08 16:23:19"
+            "time": "2013-03-13 17:02:03"
         },
         {
             "name": "dflydev/markdown",
@@ -194,12 +196,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "b6c2171579b4ab8c193322796ef757a185729cb8"
+                "reference": "ba67e2cf8e2ca6cada1de5a316a724df648c52ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/b6c2171579b4ab8c193322796ef757a185729cb8",
-                "reference": "b6c2171579b4ab8c193322796ef757a185729cb8",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/ba67e2cf8e2ca6cada1de5a316a724df648c52ac",
+                "reference": "ba67e2cf8e2ca6cada1de5a316a724df648c52ac",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +237,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-03-07 06:57:14"
+            "time": "2013-03-10 07:23:01"
         }
     ],
     "packages-dev": [
@@ -245,10 +247,9 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "brainsware/sauce": 20,
-        "brainsware/bacon": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": {
         "php": ">= 5.4.0"
     },
