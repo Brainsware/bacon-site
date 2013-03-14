@@ -1,7 +1,7 @@
 <?php
 
-require 'vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
-return require('vendor/brainsware/bacon/lib/boot.php');
+return require(__DIR__ . '/../vendor/brainsware/bacon/lib/boot.php');
 
 ?>
