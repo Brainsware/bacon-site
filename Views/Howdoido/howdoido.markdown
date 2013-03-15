@@ -1,8 +1,10 @@
+[TOC]
+
 # How do I do ...?
 
 This article gets you started on working with Bacon as quickly as possible and gives you an overview on how to handle common use cases.
 
-## Installation
+## Installation {#installation}
 
 The bare minimum to get started with Bacon is PHP (>= 5.4.0) and composer. You can either install those from http://php.net/ and http://getcomposer.org/ or via your distribution.
 This tutorial will not go into details of how to do that.
@@ -10,7 +12,7 @@ This tutorial will not go into details of how to do that.
 Once you have PHP and composer set up, you can create a skeleton project with the following:
 
 ```
-% ~/src % composer create-project brainsware/bacon-dist CatBlog
+% composer create-project brainsware/bacon-dist CatBlog
 ```
 
 This will download all the necessary software, and create all important directories and sample configuration files for your new Cat Blog:
@@ -42,11 +44,12 @@ Writing lock file
 Generating autoload files
 ```
 
-XXX: Describe what that software does and what those necessary directories are, and what we can find inside -- is this the right space?
+We will describe in [Components Chapter] each of these pieces of software and how they fit into the overall architecture of Bacon.
+For now let's consider them as opaque building blocks.
 
 ## Configuration
 
-Bacon uses PHP files for storing all of its configurations. This makes it really easy to retrieve them at 
+Bacon uses PHP files for storing all of its configurations.
 
 The skeleton project we provide comes with an Intro controller, which is set as the default fallback controller in `Config/Base.php`
 
@@ -66,33 +69,84 @@ needs a database, you will have to create it and connect Bacon to it via `Config
 
 ## A Blog
 
-The classic project to demonstrate working with a framework is a blog.
+The classic example of starting a new programming language is the "Hello, World!" program, the
+classic project to demonstrate working with a framework is a blog. We'll stick with our CatBlog
+example from above to this tradition.
 
-### MVC
+XXX MVC Introduction
+
+### Controllers
+
+XXX Why Application Controller?
+
+Controllers/Application.php:
+```
+namespace Controllers;
+
+class Application extends \Bacon\Controller
+{
+        public function init ()
+        {
+                # This method gets called before any other one.
+                # Useful for initiating things like authentication, session checks, adding hooks to Twig, etc.
+        }
+}
+```
+
+Now let's create a basic controller that shows us a list of all entries.
+
+Controllers/Blag.php
+```
+namespace Controllers;
+
+class Blag extends Application
+{
+        public function index ()
+        {
+                $this->posts = \Models\Post::all();
+        }
+}
+```
+
+### Views
+
+Bacon uses [Twig](http://twig.sensiolabs.org/) as its templating engine.
+
+### Models And Collections
 
 
 
 ### Routing
 
-URLs map to controllers and their methods in a very specific way. There is no configuration for routing, as we go convention over configuration.
+URLs map to controllers and their methods in a very specific way. There is no configuration for routing.  We prefer the principle of convention over configuration.
 The base of this convention is the REST principle. A resource maps to a controller and its actions with the HTTP vocabulary. The only thing needed
 for introducing a new URL is dropping in a new controller with the same name and implement its actions.
 
-The callable controller actions are:
+The controller actions that your applications can call are:
 
 | Action   | URL                | HTTP Method |
 |:---------|:-------------------|:------------|
 | #index   | /resource          | GET         |
-| #show    | /resource/:id      | GET         |
 | #new     | /resource/new      | GET         |
+| #show    | /resource/:id      | GET         |
 | #create  | /resource/         | POST        |
 | #edit    | /resource/:id/edit | GET         |
 | #update  | /resource/:id      | PUT (*)     |
 | #destroy | /resource/:id      | DELETE (*)  |
 
+`:id` is an arbitrary identifier for a specific resource you wish to access. In our example
+this could be the cat's name: By calling `/catcontent/new` we can create a new cat profile 
+for a cat named PuffyPaws and `#show` that profile with `/catcontent/PuffyPaws`
+
+XXX explain difference between #new and #create
+
  (*) Since browsers only allow GET and POST requests, PUT and DELETE are
  distinguished from a normal POST request by a parameter called "_method".
  It may be embedded in a hidden form field or in the URL as GET parameter.
+
+### Pretty URLs
+
+Everybody likes pretty URLs, yet noone likes mod_rewrite. The easiest solution: FallbackResource. USE IT MOTHERFUCKER
 
 ### presenter
 
