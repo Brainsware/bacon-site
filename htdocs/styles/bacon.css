@@ -8,13 +8,23 @@ html, body {
   min-height: 100%;
 }
 
+#footer, #push {
+  height: 70px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  float: left;
+  margin-top: 50px;
+}
+
 body {
   font-family: 'OpenSans';
   color: #111;
 }
 
 p {
-  margin-bottom: 1em;
+  margin: 0.5em 0;
 
   font-size: 1.15em;
   line-height: 1.5em;
@@ -67,14 +77,6 @@ h2 {
   padding-right: 15px;
 }
 
-.footer {
-  position: relative;
-  margin-top: -101px;
-  height: 77px;
-  clear: both;
-  padding-top: 0px;
-}
-
 #footer {
   border-top: 1px solid #e5e5e5;
 
@@ -83,4 +85,18 @@ h2 {
 
 #footer p {
   font-size: 0.9em;
+}
+
+pre {
+  width: 820px;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: black;
+  color: #ccc;
+}
+
+p > code {
+  background-color: #ccc;
+  padding: 2px;
 }

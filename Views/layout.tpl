@@ -36,18 +36,20 @@
       <div class="push"></div>
     </div>
 
-    <div class="row footer">
-      <div class="onecol"><!-- --></div>
-      <div class="tencol" id="footer">
-        <p class="center">
-        bacon PHP is brought to you by <a href="http://brainsware.org">brainsware</a>.
-        </p>
+    <div id="footer">
+      <div class="row">
+        <div class="onecol"><!-- --></div>
+        <div class="tencol">
+          <p class="center">
+          bacon PHP is brought to you by <a href="http://brainsware.org">brainsware</a>.
+          </p>
 
-        <p class="center">
-        <a href="http://brainsware.org/imprint.html">Imprint</a>
-        </p>
+          <p class="center">
+          <a href="http://brainsware.org/imprint.html">Imprint</a>
+          </p>
+        </div>
+        <div class="onecol last"><!-- --></div>
       </div>
-      <div class="onecol last"><!-- --></div>
     </div>
   </body>
 </html>
