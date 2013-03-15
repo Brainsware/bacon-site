@@ -6,7 +6,7 @@
 
 	"require": {
 		"php": ">= 5.4.0",
-		"brainsware/bacon": "0.1.0"
+		"brainsware/bacon": "0.1.1"
 	},
 
 	"autoload": {
