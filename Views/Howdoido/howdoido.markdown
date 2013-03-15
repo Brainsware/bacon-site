@@ -64,14 +64,11 @@ Here are the basic options you will want to set for your database:
 'password' => 'VryScrPswd', # The password.
 ```
 
-Bacon cannot, and hence, does not provide default values for these options. If your application
-needs a database, you will have to create it and connect Bacon to it via `Config/Database.php`.
+Bacon cannot, and hence, does not provide default values for these options. If your application needs a database, you will have to create it and connect Bacon to it via `Config/Database.php`.
 
 ## A Blog {#blog}
 
-The classic example of starting a new programming language is the "Hello, World!" program, the
-classic project to demonstrate working with a framework is a blog. We'll stick with our CatBlog
-example from above.
+The classic example of starting a new programming language is the "Hello, World!" program, the classic project to demonstrate working with a web framework is a blog. We'll stick with our CatBlog example from above.
 
 ### Models {#models}
 
@@ -86,7 +83,7 @@ namespace Model;
 
 class Post extends \Bacon\ORM\Model
 {
-        public static $table_name = 'post';
+	public static $table_name = 'post';
 }
 ```
 
@@ -94,9 +91,7 @@ This model will provide you with basic functionality for adding, editing, deleti
 
 ### Controllers {#controllers}
 
-First off, there is an `Application` controller already present in the skeleton project. It is supposed to hold any global methods that 
-are needed in all controllers, e.g. authentication code or template filter methods. All controllers are supposed to derive from that global
-`Application` controller.
+First off, there is an `Application` controller already present in the skeleton project. It is supposed to hold any global methods that  are needed in all controllers, e.g. authentication code or template filter methods. All controllers are supposed to derive from that global `Application` controller.
 
 ```
 # Controllers/Application.php:
@@ -105,11 +100,11 @@ namespace Controllers;
 
 class Application extends \Bacon\Controller
 {
-        public function init ()
-        {
-                # This method gets called before any other.
-                # Useful for initiating things like authentication, session checks, adding hooks to Twig, etc.
-        }
+	public function init ()
+	{
+		# This method gets called before any other.
+		# Useful for initiating things like authentication, session checks, adding hooks to Twig, etc.
+	}
 }
 ```
 
@@ -122,11 +117,12 @@ namespace Controllers;
 
 class Blag extends Application
 {
-        // Blag#index is called when /blag (GET) is requested.
-        public function index ()
-        {
-                $this->posts = \Models\Post::all();
-        }
+	// Blag#index is called when /blag (GET) is requested.
+	public function index ()
+	{
+		# ::all() retrieves a collection of all entries in the post table
+		$this->posts = \Models\Post::all();
+	}
 }
 ```
 
@@ -146,10 +142,9 @@ Views/Blag/index.tpl
 ### Routing {#routing}
 
 URLs map to controllers and their methods in a very specific way. There is no configuration for routing. We prefer the principle of convention over configuration.
-The base of this convention is the REST principle. A resource maps to a controller and its actions with the HTTP vocabulary. The only thing needed
-for introducing a new URL is dropping in a new controller with the same name and implement its actions.
+The base of this convention is the REST principle. A resource maps to a controller and its actions with the HTTP vocabulary. The only thing needed for introducing a new URL is dropping in a new controller with the same name and implement its actions.
 
-The controller actions that your applications can call are:
+The callable controller actions are:
 
 | Action   | URL                | HTTP Method |
 |:---------|:-------------------|:------------|
@@ -161,21 +156,17 @@ The controller actions that your applications can call are:
 | #update  | /resource/:id      | PUT (*)     |
 | #destroy | /resource/:id      | DELETE (*)  |
 
-`:id` is an (almost) arbitrary identifier for a specific resource you wish to access. In our example
-this could be the cat's name: By calling `/catcontent/new` we can create a new cat profile 
-for a cat named PuffyPaws and `#show` that profile with `/catcontent/PuffyPaws`
+`:id` is an (almost) arbitrary identifier for a specific resource you wish to access. In our example this could be the cat's name: By calling `/catcontent/new` we can create a new cat profile for a cat named PuffyPaws and `#show` that profile with `/catcontent/PuffyPaws`
 
 XXX explain difference between #new and #create
 
- (*) Since browsers only allow GET and POST requests, PUT and DELETE are
- distinguished from a normal POST request by a parameter called "_method".
- It may be embedded in a hidden form field or in the URL as GET parameter.
+(*) Since browsers only allow GET and POST requests, PUT and DELETE are distinguished from a normal POST request by a parameter called "_method". It may be embedded in a hidden form field or in the URL as GET parameter.
 
 ### Pretty URLs {#front-controller}
 
 
 XXX We shouldn't point out what's wrong with other implementation but rather show what's the *proper* implementation of this. So, just FallbackResource.
-A remark that mod_rewrite sucks is okay, but at the end. I don't want people copying the first snippet they find. (And that will happen, I'm doing this all the time myself.)
+XXX A remark that mod_rewrite sucks is okay, but at the end. I don't want people copying the first snippet they find. (And that will happen, I'm doing this all the time myself.)
 
 Everybody likes pretty URLs! What's more fascinating is that most of the time we find something so ugly as mod_rewrite at the center their implementation:
 
