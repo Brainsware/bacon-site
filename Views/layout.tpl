@@ -5,6 +5,7 @@
 
     {% block header %}
     <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="/styles/1140.css" />
     <link rel="stylesheet" type="text/css" href="/styles/bacon.css" />
     {% endblock %}
