@@ -101,3 +101,15 @@ table tr td {
   padding: 3px 1em 0px 0px;
   border-top: 1px dashed #f0f0f0;
 }
+
+#toc ul {
+  list-style-type: none;
+}
+
+#toc ul li {
+  padding: 1px 2px;
+}
+
+#toc ul li ul li {
+  padding-left: 15px;
+}

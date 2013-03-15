@@ -11,7 +11,6 @@ class News extends Application
 	public function index ()
 	{
 		$this->posts = \Models\Post::order('published_at', 'DESC');
-		
 	}
 
 	public function show ($id)
