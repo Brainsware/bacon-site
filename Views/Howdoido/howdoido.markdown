@@ -15,7 +15,7 @@ Once you have PHP and composer set up, you can create a skeleton project with th
 % composer create-project brainsware/bacon-dist CatBlog
 ```
 
-This will download all the necessary software, and create all important directories and sample configuration files for your new Cat Blog:
+This will download all the necessary software, and create all important directories and sample configuration files for your new cat blog:
 
 ```
 Installing brainsware/bacon-dist (0.1.0)
@@ -47,7 +47,7 @@ Generating autoload files
 We will describe in [Components Chapter] each of these pieces of software and how they fit into the overall architecture of Bacon.
 For now let's consider them as opaque building blocks.
 
-## Configuration
+## Configuration {#configuration}
 
 Bacon uses PHP files for storing all of its configurations.
 
@@ -67,27 +67,47 @@ Here are the basic options you will want to set for your database:
 Bacon cannot, and hence, does not provide default values for these options. If your application
 needs a database, you will have to create it and connect Bacon to it via `Config/Database.php`.
 
-## A Blog
+## A Blog {#blog}
 
 The classic example of starting a new programming language is the "Hello, World!" program, the
 classic project to demonstrate working with a framework is a blog. We'll stick with our CatBlog
-example from above to this tradition.
+example from above.
 
-XXX MVC Introduction
+### Models {#models}
 
-### Controllers
+Before anything else, we need a means of retrieving data from the database. In Bacon this is done with models.
 
-XXX Why Application Controller?
+The simplest form of a model is class deriving from `\Bacon\ORM\Model` in the namespace `\Models` holding a static variable `$table_name` with the table name.
 
-Controllers/Application.php:
 ```
+# Models/Post.php:
+
+namespace Model;
+
+class Post extends \Bacon\ORM\Model
+{
+        public static $table_name = 'post';
+}
+```
+
+This model will provide you with basic functionality for adding, editing, deleting and retrieving entries of the table "post".
+
+### Controllers {#controllers}
+
+First off, there is an `Application` controller already present in the skeleton project. It is supposed to hold any global methods that 
+are needed in all controllers, e.g. authentication code or template filter methods. All controllers are supposed to derive from that global
+`Application` controller.
+
+```
+# Controllers/Application.php:
+
 namespace Controllers;
 
 class Application extends \Bacon\Controller
 {
         public function init ()
         {
-                # This method gets called before any other one.
+                # This method gets called before any other.
                 # Useful for initiating things like authentication, session checks, adding hooks to Twig, etc.
         }
 }
@@ -95,12 +115,14 @@ class Application extends \Bacon\Controller
 
 Now let's create a basic controller that shows us a list of all entries.
 
-Controllers/Blag.php
 ```
+# Controllers/Blag.php:
+
 namespace Controllers;
 
 class Blag extends Application
 {
+        // Blag#index is called when /blag (GET) is requested.
         public function index ()
         {
                 $this->posts = \Models\Post::all();
@@ -108,17 +130,22 @@ class Blag extends Application
 }
 ```
 
-### Views
+### Views {#views}
 
 Bacon uses [Twig](http://twig.sensiolabs.org/) as its templating engine.
 
-### Models And Collections
+Views follow the same structure as controllers do; for each controller there is a folder with the same name. Additionally, a default layout in the `Views/` directory is mandatory. The names of the templates are the same as the [controller actions](#routing)
+
+```
+Views/layout.tpl
+Views/Blag/index.tpl
+```
 
 
 
-### Routing
+### Routing {#routing}
 
-URLs map to controllers and their methods in a very specific way. There is no configuration for routing.  We prefer the principle of convention over configuration.
+URLs map to controllers and their methods in a very specific way. There is no configuration for routing. We prefer the principle of convention over configuration.
 The base of this convention is the REST principle. A resource maps to a controller and its actions with the HTTP vocabulary. The only thing needed
 for introducing a new URL is dropping in a new controller with the same name and implement its actions.
 
@@ -134,7 +161,7 @@ The controller actions that your applications can call are:
 | #update  | /resource/:id      | PUT (*)     |
 | #destroy | /resource/:id      | DELETE (*)  |
 
-`:id` is an arbitrary identifier for a specific resource you wish to access. In our example
+`:id` is an (almost) arbitrary identifier for a specific resource you wish to access. In our example
 this could be the cat's name: By calling `/catcontent/new` we can create a new cat profile 
 for a cat named PuffyPaws and `#show` that profile with `/catcontent/PuffyPaws`
 
@@ -144,10 +171,26 @@ XXX explain difference between #new and #create
  distinguished from a normal POST request by a parameter called "_method".
  It may be embedded in a hidden form field or in the URL as GET parameter.
 
-### Pretty URLs
+### Pretty URLs {#front-controller}
 
-Everybody likes pretty URLs, yet noone likes mod_rewrite. The easiest solution: FallbackResource. USE IT MOTHERFUCKER
 
-### presenter
+XXX We shouldn't point out what's wrong with other implementation but rather show what's the *proper* implementation of this. So, just FallbackResource.
+A remark that mod_rewrite sucks is okay, but at the end. I don't want people copying the first snippet they find. (And that will happen, I'm doing this all the time myself.)
+
+Everybody likes pretty URLs! What's more fascinating is that most of the time we find something so ugly as mod_rewrite at the center their implementation:
+
+```
+RewriteCond %{REQUEST_URI} !-f
+RewriteCond %{REQUEST_URI} !-d
+RewriteRule ^ /index.php
+```
+
+Even so, we can destill the basic pattern: send every request that's not satisfied otherwise to `index.php`. This pattern is called the [Front Controller Pattern](https://en.wikipedia.org/wiki/Front_Controller_pattern) and modern Web Application Servers like [Nginx](http://wiki.nginx.org/Pitfalls#Front_Controller_Pattern_based_packages) and [Apache HTTPD](http://httpd.apache.org/docs/current/mod/mod_dir.html#fallbackresource) have a very simple way of imlementing it:
+
+```
+FallbackResource /index.php
+```
+
+### presenter {#presenter}
 
 

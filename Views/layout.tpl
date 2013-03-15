@@ -20,6 +20,7 @@
         <div class="tencol" id="navbar">
           <span><a href="/news">News</a></span>
           <span><a href="/howdoido/">Getting started</a></span>
+          <span><a href="/documentation/">Documentation</a></span>
           <span><a href="/sauce">Sauce</a></span>
           <span><a href="/download">Download</a></span>
           <span><a href="/contribute">Contribute</a></span>
