@@ -16,9 +16,7 @@
         <img src="/images/baconphp.png" alt="bacon PHP" />
       </div>
       <div class="row center">
-        <div class="onecol"><!-- --></div>
-
-        <div class="tencol" id="navbar">
+        <div class="twelvecol" id="navbar">
           <span><a href="/news">News</a></span>
           <span><a href="/howdoido/">Getting started</a></span>
           <span><a href="/documentation/">Documentation</a></span>
@@ -26,8 +24,6 @@
           <span><a href="/download">Download</a></span>
           <span><a href="/contribute">Contribute</a></span>
         </div>
-
-        <div class="onecol last"><!-- --></div>
       </div>
 
       <div class="row">

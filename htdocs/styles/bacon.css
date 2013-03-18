@@ -4,6 +4,10 @@ html, body {
   height: 100%;
 }
 
+.row {
+  max-width: 940px;
+}
+
 #container {
   min-height: 100%;
 }
