@@ -9,6 +9,7 @@ class Application extends \Bacon\Controller
 	public function init ()
 	{
 		$this->add_filter('markdown', 'MarkdownExtended');
+		$this->add_filter('dotoc', 'doTOC');
 	}
 }
 

@@ -11,12 +11,12 @@ class News extends Application
 	public function index ()
 	{
 		$this->posts = \Models\Post::order('published_at', 'DESC');
-		
 	}
 
-	public function show ($id)
+	public function show ()
 	{
-		$this->post = \Model\Post::find($id);
+		return; # XXX TODO
+		$this->post = \Models\Post::find();
 
 		$this->enable_comments = true;
 

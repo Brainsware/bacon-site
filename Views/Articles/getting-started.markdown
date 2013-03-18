@@ -1,12 +1,10 @@
-[TOC]
-
 # How do I do ...?
 
 This article gets you started on working with Bacon as quickly as possible and gives you an overview on how to handle common use cases.
 
 ## Installation {#installation}
 
-The bare minimum to get started with Bacon is PHP (>= 5.4.0) and composer. You can either install those from http://php.net/ and http://getcomposer.org/ or via your distribution.
+The bare minimum to get started with Bacon is PHP (>= 5.4.0) and composer. You can either install those from [php.net](http://php.net/) and [getcomposer.org](http://getcomposer.org/) respectively, or via your distribution.
 This tutorial will not go into details of how to do that.
 
 Once you have PHP and composer set up, you can create a skeleton project with the following:
@@ -14,6 +12,8 @@ Once you have PHP and composer set up, you can create a skeleton project with th
 ```
 % composer create-project brainsware/bacon-dist CatBlog
 ```
+
+> **Note:** bacon-dist is used here as bacon itself is only published as a library and would require you to set up a project on your own. 
 
 This will download all the necessary software, and create all important directories and sample configuration files for your new cat blog:
 
@@ -44,7 +44,7 @@ Writing lock file
 Generating autoload files
 ```
 
-We will describe in [Components Chapter] each of these pieces of software and how they fit into the overall architecture of Bacon.
+We will describe in the [Components Chapter](XXX: Missing Link, components Chapter) each of these pieces of software and how they fit into the overall architecture of Bacon.
 For now let's consider them as opaque building blocks.
 
 ## Configuration {#configuration}
@@ -64,7 +64,7 @@ Here are the basic options you will want to set for your database:
 'password' => 'VryScrPswd', # The password.
 ```
 
-Bacon cannot, and hence, does not provide default values for these options. If your application needs a database, you will have to create it and connect Bacon to it via `Config/Database.php`.
+Bacon does not provide default values for these options. If your application needs a database, you will have to create it and connect Bacon to it via `Config/Database.php`.
 
 ## A Blog {#blog}
 
@@ -72,9 +72,9 @@ The classic example of starting a new programming language is the "Hello, World!
 
 ### Models {#models}
 
-Before anything else, we need a means of retrieving data from the database. In Bacon this is done with models.
+Before anything else, we need a means of retrieving data from the database. In Bacon this is done with models. As with the database configuration, we cannot predict what it should look like, so we don't attempt to do it.
 
-The simplest form of a model is class deriving from `\Bacon\ORM\Model` in the namespace `\Models` holding a static variable `$table_name` with the table name.
+The simplest form of model is a class inheriting from `\Bacon\ORM\Model` in the namespace `\Models` holding a static variable `$table_name` with the table name:
 
 ```
 # Models/Post.php:
@@ -87,11 +87,11 @@ class Post extends \Bacon\ORM\Model
 }
 ```
 
-This model will provide you with basic functionality for adding, editing, deleting and retrieving entries of the table "post".
+This model will provide you with basic functionality for adding, editing, deleting and retrieving entries from the table "post". We'll get back to more indepth discussion of the ORM in its [own chapter](XXX: Missing link: ORM and Models).
 
 ### Controllers {#controllers}
 
-First off, there is an `Application` controller already present in the skeleton project. It is supposed to hold any global methods that  are needed in all controllers, e.g. authentication code or template filter methods. All controllers are supposed to derive from that global `Application` controller.
+An `Application` controller is already present in the skeleton project. It is supposed to hold any global methods that are needed in all controllers, e.g. authentication code or template filter methods. All controllers must derive from that global `Application` controller.
 
 ```
 # Controllers/Application.php:
@@ -104,6 +104,7 @@ class Application extends \Bacon\Controller
 	{
 		# This method gets called before any other.
 		# Useful for initiating things like authentication, session checks, adding hooks to Twig, etc.
+		# For now we'll leave it empty.
 	}
 }
 ```
@@ -141,8 +142,7 @@ Views/Blag/index.tpl
 
 ### Routing {#routing}
 
-URLs map to controllers and their methods in a very specific way. There is no configuration for routing. We prefer the principle of convention over configuration.
-The base of this convention is the REST principle. A resource maps to a controller and its actions with the HTTP vocabulary. The only thing needed for introducing a new URL is dropping in a new controller with the same name and implement its actions.
+URLs map to controllers and their methods in a very specific way. There is no configuration for routing. We prefer the principle of convention over configuration. The base of this convention is the REST principle. A resource maps to a controller and its actions with the HTTP vocabulary. The only thing needed for introducing a new URL is dropping in a new controller with the same name and implement its actions.
 
 The callable controller actions are:
 
@@ -164,24 +164,11 @@ XXX explain difference between #new and #create
 
 ### Pretty URLs {#front-controller}
 
-
-XXX We shouldn't point out what's wrong with other implementation but rather show what's the *proper* implementation of this. So, just FallbackResource.
-XXX A remark that mod_rewrite sucks is okay, but at the end. I don't want people copying the first snippet they find. (And that will happen, I'm doing this all the time myself.)
-
-Everybody likes pretty URLs! What's more fascinating is that most of the time we find something so ugly as mod_rewrite at the center their implementation:
+Bacon relies on the [Front Controller Pattern](https://en.wikipedia.org/wiki/Front_Controller_pattern) and as such all requests should be handled by Bacon's `boot.php` included in `htdocs/index.php` of your skeleton project. Many modern Web Application Servers like [Nginx](http://wiki.nginx.org/Pitfalls#Front_Controller_Pattern_based_packages) and [Apache HTTPD](http://httpd.apache.org/docs/current/mod/mod_dir.html#fallbackresource) have a very simple way of implementing this:
 
 ```
-RewriteCond %{REQUEST_URI} !-f
-RewriteCond %{REQUEST_URI} !-d
-RewriteRule ^ /index.php
-```
-
-Even so, we can destill the basic pattern: send every request that's not satisfied otherwise to `index.php`. This pattern is called the [Front Controller Pattern](https://en.wikipedia.org/wiki/Front_Controller_pattern) and modern Web Application Servers like [Nginx](http://wiki.nginx.org/Pitfalls#Front_Controller_Pattern_based_packages) and [Apache HTTPD](http://httpd.apache.org/docs/current/mod/mod_dir.html#fallbackresource) have a very simple way of imlementing it:
-
-```
+# httpd.conf, in the VirtualHost:
 FallbackResource /index.php
 ```
 
-### presenter {#presenter}
-
-
+This means: send all requests that do not point to a specific file to `index.php`.

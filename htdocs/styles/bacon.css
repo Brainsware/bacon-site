@@ -4,18 +4,43 @@ html, body {
   height: 100%;
 }
 
+.row {
+  max-width: 940px;
+}
+
+.row.narrow {
+  max-width: 800px;
+}
+
 #container {
   min-height: 100%;
+  margin: 0 auto -102px;
 }
 
 #footer, #push {
-  height: 70px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   clear: both;
   float: left;
-  margin-top: 50px;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#footer {
+  color: black;
+  height: 90px;
+  padding-top: 15px;
+
+  font-size: 10pt;
+}
+
+.footer {
+  background-color: #eaeaea;
+  border-top: 1px solid #ccc;
+}
+
+.footer div {
+  padding: 0px 20px;
 }
 
 body {
@@ -40,8 +65,12 @@ p.hero {
 }
 
 a {
-  color: #88513D;
+  color: #892A33;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 h1, h2, h3, h4 {
@@ -50,10 +79,6 @@ h1, h2, h3, h4 {
 
 .center {
   text-align: center;
-}
-
-.push {
-  margin-top: 1.5em;
 }
 
 #header {
@@ -73,16 +98,6 @@ h1, h2, h3, h4 {
   padding-right: 15px;
 }
 
-#footer {
-  border-top: 1px solid #e5e5e5;
-
-  padding: 10px 0px;
-}
-
-#footer p {
-  font-size: 0.9em;
-}
-
 pre {
   width: 820px;
   background-color: black;
@@ -97,7 +112,41 @@ p > code {
   padding: 2px;
 }
 
+blockquote {
+  margin: 1em 0px 0px 40px;
+  padding: 15px;
+  background-color: #eaeaea;
+
+  border-radius: 5px;
+}
+
+blockquote p {
+  margin: 0px;
+  padding
+}
+
 table tr td {
   padding: 3px 1em 0px 0px;
   border-top: 1px dashed #f0f0f0;
+}
+
+#toc ul {
+  list-style-type: none;
+}
+
+#toc ul li {
+  padding: 1px 2px;
+}
+
+#toc ul li ul li {
+  padding-left: 15px;
+}
+
+.blog h1 {
+  text-align: center;
+}
+
+.blog article header p {
+  font-size: 1em;
+  margin: 0px;
 }
