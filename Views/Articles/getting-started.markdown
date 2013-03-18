@@ -67,9 +67,9 @@ Here are the basic options you will want to set for your database:
 
 Bacon does not provide default values for these options. If your application needs a database, you will have to create it and connect Bacon to it via `Config/Database.php`.
 
-## A Blog {#blog}
+## How to create a Blog {#blog}
 
-The classic example of starting a new programming language is the "Hello, World!" program, the classic project to demonstrate working with a web framework is a blog. We'll stick with our CatBlog example from above.
+The classic project to demonstrate working with a web framework is a blog. We'll stick with our CatBlog example from above.
 
 ### Models {#models}
 
