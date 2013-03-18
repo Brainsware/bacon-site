@@ -1,4 +1,4 @@
-# How do I do ...?
+# Getting Started
 
 This article gets you started on working with Bacon as quickly as possible and gives you an overview on how to handle common use cases.
 
