@@ -17,7 +17,7 @@
 
       <div class="teaser fourcol last left-aligned">
         <h3><a href="/articles/contribute-support">Contribute &amp; Support</a></h3>
-        Find us on Github, get help and help us
+        Find us on Github, get support and help us improve Bacon
       </div>
 
       <!--p>For a more detailed overview of the architecture and implementation of <em>bacon</em> head over to the <a href="/documentation">Documentation</a>.</p-->
