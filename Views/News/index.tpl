@@ -17,7 +17,7 @@
     <article>
       <header>
         <h2>{{ post.title }}</h2>
-        <p>by {{ post.author.name }} on <time pubdate datetime="{{ post.published_at }}">{{ post.published_at }}</time></p>
+        <p>by <span class="author">{{ post.author.name }}</span> on <time pubdate datetime="{{ post.published_at }}">{{ post.published_at }}</time></p>
       </header>
 
       {{ post.content | markdown }}
