@@ -2,17 +2,29 @@
   <div class="row narrow">
     <div id="about">
       <p class="hero">
-      <em>bacon</em> is a clean, minimalistic and fast MVC framework. Our goal is to ease web development and provide a solid foundation for common use cases.
+      <em>Bacon</em> is a clean, minimalistic and fast MVC framework. Our goal is to ease web development and provide a solid foundation for common use cases.
       </p>
 
-      <p>To get started as quickly as possible head over to our <a href="/articles/getting-started">Getting started</a> section.</p>
+      <div class="teaser fourcol left-aligned">
+        <h3><a href="/articles/getting-started">Getting started</a></h3>
+        Head over here to dive into Bacon
+      </div>
+
+      <div class="teaser fourcol left-aligned">
+        <h3><a href="/articles/getting-started">Download</a></h3>
+        Get your own copy
+      </div>
+
+      <div class="teaser fourcol last left-aligned">
+        <h3><a href="/articles/contribute-support">Contribute &amp; Support</a></h3>
+        Find us on Github, get support and help us improve Bacon
+      </div>
+
       <!--p>For a more detailed overview of the architecture and implementation of <em>bacon</em> head over to the <a href="/documentation">Documentation</a>.</p-->
     </div>
   </div>
 
   <div class="row narrow blog">
-    <h1>Bacon News</h1>
-
     {% for post in posts %}
     <article>
       <header>
