@@ -14,16 +14,24 @@ html, body {
 
 #container {
   min-height: 100%;
+  margin: 0 auto -103px;
 }
 
 #footer, #push {
-  height: 70px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   clear: both;
   float: left;
-  margin-top: 50px;
+  height: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#footer {
+  background-color: #2B2B2B;
+  border-top: 2px solid #E0E0E0;
+  color: white;
+  height: 90px;
+  padding-top: 10px;
 
   font-size: 10pt;
 }
@@ -54,16 +62,16 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 h1, h2, h3, h4 {
   margin: 0.4em 0 0.2em 0;
 }
 
 .center {
   text-align: center;
-}
-
-.push {
-  margin-top: 1.5em;
 }
 
 #header {
@@ -95,6 +103,19 @@ pre {
 p > code {
   background-color: #ccc;
   padding: 2px;
+}
+
+blockquote {
+  margin: 1em 0px 0px 40px;
+  padding: 15px;
+  background-color: #eaeaea;
+
+  border-radius: 5px;
+}
+
+blockquote p {
+  margin: 0px;
+  padding
 }
 
 table tr td {
