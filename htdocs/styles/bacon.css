@@ -14,7 +14,7 @@ html, body {
 
 #container {
   min-height: 100%;
-  margin: 0 auto -102px;
+  margin: 0 auto -162px;
 }
 
 #footer, #push {
@@ -27,20 +27,44 @@ html, body {
 }
 
 #footer {
-  color: black;
-  height: 90px;
-  padding-top: 15px;
+  color: #f0f0f0;
+  height: 150px;
+  padding-top: 10px;
 
-  font-size: 10pt;
+  font-size: 14px;
+  background-color: #2b2b2b;
+  border-top: 2px solid #ccc;
 }
 
-.footer {
-  background-color: #eaeaea;
-  border-top: 1px solid #ccc;
+#footer a {
+  margin: 0px!important;
 }
 
-.footer div {
-  padding: 0px 20px;
+#footer h4 {
+  font-size: 12pt;
+  margin-bottom: 5px;
+}
+
+#footer .share a div {
+  background-image: url('/images/bw_share.png');
+  width: 24px;
+  height: 24px;
+  float: left;
+  margin: 5px;
+
+  border-radius: 2px;
+}
+
+#footer .share .twitter {
+  background-position: 24px 0px;
+}
+
+#footer .share div.facebook:hover {
+  background-position: 0px -24px;
+}
+
+#footer .share div.twitter:hover {
+  background-position: -24px -24px;
 }
 
 body {

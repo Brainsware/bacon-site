@@ -159,8 +159,6 @@ The callable controller actions are:
 
 `:id` is an (almost) arbitrary identifier for a specific resource you wish to access. In our example this could be the cat's name: By calling `/catcontent/new` we can create a new cat profile for a cat named PuffyPaws and `#show` that profile with `/catcontent/PuffyPaws`
 
-XXX explain difference between #new and #create
-
 (*) Since browsers only allow GET and POST requests, PUT and DELETE are distinguished from a normal POST request by a parameter called "_method". It may be embedded in a hidden form field or in the URL as GET parameter.
 
 ### Pretty URLs {#front-controller}

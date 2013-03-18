@@ -13,7 +13,7 @@
 	<body>
     <div id="container">
       <div id="header" class="row center">
-        <img src="/images/baconphp.png" alt="bacon PHP" />
+        <a href="/"><img src="/images/baconphp.png" alt="bacon PHP" /></a>
       </div>
       <div class="row center">
         <div class="twelvecol" id="navbar">
@@ -35,15 +35,19 @@
     </div>
 
     <div id="footer">
-      <div class="row footer">
+      <div class="row narrow footer">
         <div>
-          <p class="center">
-          bacon PHP is brought to you by <a href="http://brainsware.org">brainsware</a>.
+          <p>
+          The Bacon PHP Framwork is brought to you by <a href="http://brainsware.org">Brainsware</a>
+          </p>
+          <p>
+          <a target="_blank" href="http://brainsware.org/imprint.html">Imprint</a>
           </p>
 
-          <p class="center">
-          <a href="http://brainsware.org/imprint.html">Imprint</a>
-          </p>
+          <div class="share">
+            <a href="http://facebook.com/brainsware" target="_blank"><div class="facebook"></div></a>
+            <a href="http://twitter.com/brainsware" target="_blank"><div class="twitter"></div></a>
+          </div>
         </div>
       </div>
     </div>
