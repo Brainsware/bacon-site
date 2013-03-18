@@ -12,6 +12,10 @@ html, body {
   max-width: 800px;
 }
 
+.left-aligned {
+  text-align: left;
+}
+
 #container {
   min-height: 100%;
   margin: 0 auto -162px;
@@ -80,12 +84,18 @@ p {
   text-align: justify;
 }
 
-p.hero {
+.hero {
   background-color: #eaeaea;
   padding: 1em;
 
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+.teaser {
+  min-height: 80px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 1em;
 }
 
 a {
