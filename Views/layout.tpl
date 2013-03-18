@@ -18,11 +18,11 @@
       <div class="row center">
         <div class="twelvecol" id="navbar">
           <span><a href="/news">News</a></span>
-          <span><a href="/howdoido/">Getting started</a></span>
-          <span><a href="/documentation/">Documentation</a></span>
-          <span><a href="/sauce">Sauce</a></span>
-          <span><a href="/download">Download</a></span>
-          <span><a href="/contribute">Contribute</a></span>
+          <span><a href="/articles/getting-started/">Getting started</a></span>
+          <!--span><a href="/documentation/">Documentation</a></span-->
+          <!--span><a href="/sauce">Sauce</a></span-->
+          <span><a href="/articles/download">Download</a></span>
+          <span><a href="/articles/contribute-support">Contribute &amp; Support</a></span>
         </div>
       </div>
 
