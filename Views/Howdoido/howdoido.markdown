@@ -45,7 +45,7 @@ Writing lock file
 Generating autoload files
 ```
 
-We will describe in [Components Chapter] each of these pieces of software and how they fit into the overall architecture of Bacon.
+We will describe in the [Components Chapter](XXX: Missing Link, components Chapter) each of these pieces of software and how they fit into the overall architecture of Bacon.
 For now let's consider them as opaque building blocks.
 
 ## Configuration {#configuration}
@@ -88,7 +88,7 @@ class Post extends \Bacon\ORM\Model
 }
 ```
 
-This model will provide you with basic functionality for adding, editing, deleting and retrieving entries from the table "post".
+This model will provide you with basic functionality for adding, editing, deleting and retrieving entries from the table "post". We'll get back to more indepth discussion of the ORM in its [own chapter](XXX: Missing link: ORM and Models).
 
 ### Controllers {#controllers}
 
