@@ -63,7 +63,7 @@ Here are the basic options you will want to set for your database:
 'password' => 'VryScrPswd', # The password.
 ```
 
-Bacon cannot, and hence, does not provide default values for these options. If your application needs a database, you will have to create it and connect Bacon to it via `Config/Database.php`.
+Bacon does not provide default values for these options. If your application needs a database, you will have to create it and connect Bacon to it via `Config/Database.php`.
 
 ## A Blog {#blog}
 
