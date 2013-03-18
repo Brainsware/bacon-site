@@ -4,8 +4,7 @@ This article gets you started on working with Bacon as quickly as possible and g
 
 ## Installation {#installation}
 
-The bare minimum to get started with Bacon is PHP (>= 5.4.0) and composer. You can either install those from [php.net](http://php.net/) and
-[getcomposer.org](http://getcomposer.org/) respectively, or via your distribution.
+The bare minimum to get started with Bacon is PHP (>= 5.4.0) and composer. You can either install those from [php.net](http://php.net/) and [getcomposer.org](http://getcomposer.org/) respectively, or via your distribution.
 This tutorial will not go into details of how to do that.
 
 Once you have PHP and composer set up, you can create a skeleton project with the following:
@@ -71,8 +70,7 @@ The classic example of starting a new programming language is the "Hello, World!
 
 ### Models {#models}
 
-Before anything else, we need a means of retrieving data from the database. In Bacon this is done with models.
-As with the database configuration, we cannot predict what it should look like, so we don't attempt to do it.
+Before anything else, we need a means of retrieving data from the database. In Bacon this is done with models. As with the database configuration, we cannot predict what it should look like, so we don't attempt to do it.
 
 The simplest form of model is a class inheriting from `\Bacon\ORM\Model` in the namespace `\Models` holding a static variable `$table_name` with the table name:
 
@@ -91,8 +89,7 @@ This model will provide you with basic functionality for adding, editing, deleti
 
 ### Controllers {#controllers}
 
-An `Application` controller is already present in the skeleton project. It is supposed to hold any global methods that are needed in all controllers, e.g.
-authentication code or template filter methods. All controllers must derive from that global `Application` controller.
+An `Application` controller is already present in the skeleton project. It is supposed to hold any global methods that are needed in all controllers, e.g. authentication code or template filter methods. All controllers must derive from that global `Application` controller.
 
 ```
 # Controllers/Application.php:
@@ -132,8 +129,7 @@ class Blag extends Application
 
 Bacon uses [Twig](http://twig.sensiolabs.org/) as its templating engine.
 
-Views follow the same structure as controllers do; for each controller there is a folder with the same name. Additionally, a default layout in the `Views/`
-directory is mandatory. The names of the templates are the same as the [controller actions](#routing)
+Views follow the same structure as controllers do; for each controller there is a folder with the same name. Additionally, a default layout in the `Views/` directory is mandatory. The names of the templates are the same as the [controller actions](#routing)
 
 ```
 Views/layout.tpl
@@ -144,9 +140,7 @@ Views/Blag/index.tpl
 
 ### Routing {#routing}
 
-URLs map to controllers and their methods in a very specific way. There is no configuration for routing. We prefer the principle of convention over configuration.
-The base of this convention is the REST principle. A resource maps to a controller and its actions with the HTTP vocabulary. The only thing needed for introducing
-a new URL is dropping in a new controller with the same name and implement its actions.
+URLs map to controllers and their methods in a very specific way. There is no configuration for routing. We prefer the principle of convention over configuration. The base of this convention is the REST principle. A resource maps to a controller and its actions with the HTTP vocabulary. The only thing needed for introducing a new URL is dropping in a new controller with the same name and implement its actions.
 
 The callable controller actions are:
 
@@ -168,10 +162,7 @@ XXX explain difference between #new and #create
 
 ### Pretty URLs {#front-controller}
 
-Everybody likes pretty URLs! What's more fascinating is that most of the time we find something so ugly as mod_rewrite at the center their implementation.
-Bacon does not come with an `.htaccess` file. Instead it relies on the [Front Controller Pattern](https://en.wikipedia.org/wiki/Front_Controller_pattern).
-Many modern Web Application Servers like [Nginx](http://wiki.nginx.org/Pitfalls#Front_Controller_Pattern_based_packages) and
-[Apache HTTPD](http://httpd.apache.org/docs/current/mod/mod_dir.html#fallbackresource) have a very simple way of imlementing it:
+Everybody likes pretty URLs! What's more fascinating is that most of the time we find something so ugly as mod_rewrite at the center their implementation. Bacon does not come with an `.htaccess` file. Instead it relies on the [Front Controller Pattern](https://en.wikipedia.org/wiki/Front_Controller_pattern). Many modern Web Application Servers like [Nginx](http://wiki.nginx.org/Pitfalls#Front_Controller_Pattern_based_packages) and [Apache HTTPD](http://httpd.apache.org/docs/current/mod/mod_dir.html#fallbackresource) have a very simple way of imlementing it:
 
 ```
 # httpd.conf, in the VirtualHost:
