@@ -1,18 +1,18 @@
 {
-    "hash": "5d1fdbea169b29bd9ce621dc70ff0dab",
+    "hash": "85801e40e653fdfe8f59e4cfd64831f6",
     "packages": [
         {
             "name": "brainsware/bacon",
-            "version": "0.1.3",
+            "version": "0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Brainsware/bacon.git",
-                "reference": "0.1.3"
+                "reference": "0.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Brainsware/bacon/zipball/0.1.3",
-                "reference": "0.1.3",
+                "url": "https://api.github.com/repos/Brainsware/bacon/zipball/0.1.4",
+                "reference": "0.1.4",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
             ],
             "description": "Fast and scalable PHP MVC framework",
             "homepage": "http://baconphp.net",
-            "time": "2013-03-18 14:51:50"
+            "time": "2013-03-18 15:07:04"
         },
         {
             "name": "brainsware/php-markdown-extra-extended",
