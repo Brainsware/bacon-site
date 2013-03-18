@@ -7,7 +7,7 @@ This article gets you started on working with Bacon as quickly as possible and g
 The bare minimum to get started with Bacon is PHP (>= 5.4.0) and composer. You can either install those from [php.net](http://php.net/) and [getcomposer.org](http://getcomposer.org/) respectively, or via your distribution.
 This tutorial will not go into details of how to do that.
 
-Once you have PHP and composer set up, you can create a skeleton project with the following:
+Once you have PHP and composer set up, you can create a skeleton project with the following composer command:
 
 ```
 % composer create-project brainsware/bacon-dist CatBlog
@@ -15,8 +15,9 @@ Once you have PHP and composer set up, you can create a skeleton project with th
 
 > **Note:** bacon-dist is used here as bacon itself is only published as a library and would require you to set up a project on your own. 
 
-This will download all the necessary software, and create all important directories and sample configuration files for your new cat blog:
+This will download all the necessary software, and create all important directories and sample configuration files for your new cat blog.
 
+You should see the following output:
 ```
 Installing brainsware/bacon-dist (0.1.0)
   - Installing brainsware/bacon-dist (0.1.0)
@@ -51,7 +52,7 @@ For now let's consider them as opaque building blocks.
 
 Bacon uses PHP files for storing all of its configurations.
 
-The skeleton project we provide comes with an Intro controller, which is set as the default fallback controller in `Config/Base.php`
+The skeleton project comes with an Intro controller, which is set as the default fallback controller in `Config/Base.php`
 
 The second config file you will want to look at is `Config/Database.php`
 Here are the basic options you will want to set for your database:
