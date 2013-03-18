@@ -104,7 +104,8 @@ class Application extends \Bacon\Controller
 	public function init ()
 	{
 		# This method gets called before any other.
-		# Useful for initiating things like authentication, session checks, adding hooks to Twig, etc.
+		# Useful for initiating things like authentication, session checks,
+		# adding hooks to Twig, etc.
 		# For now we'll leave it empty.
 	}
 }
