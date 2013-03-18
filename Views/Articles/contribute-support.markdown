@@ -2,7 +2,7 @@
 
 ## Bacon library support {#bacon}
 
-If you have a problem with Bacon, please head over to our [Bacon Github repository](https://github.com/Brainsware/bacon) and [create an issue](https://github.com/Brainsware/bacon/issues).
+If you encounter a problem with Bacon, please head over to our [Bacon Github repository](https://github.com/Brainsware/bacon) and [create an issue](https://github.com/Brainsware/bacon/issues).
 
 ## Bacon-dist package {#bacon-dist}
 
