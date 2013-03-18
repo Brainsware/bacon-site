@@ -165,14 +165,14 @@ XXX explain difference between #new and #create
 
 ### Pretty URLs {#front-controller}
 
-Everybody likes pretty URLs! What's more fascinating is that most of the time we find something so ugly as mod_rewrite at the center their implementation. Bacon does not come with an `.htaccess` file. Instead it relies on the [Front Controller Pattern](https://en.wikipedia.org/wiki/Front_Controller_pattern). Many modern Web Application Servers like [Nginx](http://wiki.nginx.org/Pitfalls#Front_Controller_Pattern_based_packages) and [Apache HTTPD](http://httpd.apache.org/docs/current/mod/mod_dir.html#fallbackresource) have a very simple way of imlementing it:
+Bacon relies on the [Front Controller Pattern](https://en.wikipedia.org/wiki/Front_Controller_pattern) and as such all requests should be handled by Bacon's `boot.php` included in `htdocs/index.php` of your skeleton project. Many modern Web Application Servers like [Nginx](http://wiki.nginx.org/Pitfalls#Front_Controller_Pattern_based_packages) and [Apache HTTPD](http://httpd.apache.org/docs/current/mod/mod_dir.html#fallbackresource) have a very simple way of implementing this:
 
 ```
 # httpd.conf, in the VirtualHost:
 FallbackResource /index.php
 ```
 
-This means: Send all requests that cannot be satisfied otherwise to `index.php`.
+This means: send all requests that do not point to a specific file to `index.php`.
 
 ### presenter {#presenter}
 
