@@ -8,6 +8,10 @@ html, body {
   max-width: 940px;
 }
 
+.row.narrow {
+  max-width: 800px;
+}
+
 #container {
   min-height: 100%;
 }
@@ -116,4 +120,13 @@ table tr td {
 
 #toc ul li ul li {
   padding-left: 15px;
+}
+
+.blog h1 {
+  text-align: center;
+}
+
+.blog article header p {
+  font-size: 1em;
+  margin: 0px;
 }

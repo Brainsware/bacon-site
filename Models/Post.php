@@ -16,6 +16,11 @@ class Post extends \Bacon\ORM\Model
 		}
 		parent::save($options);
 	}
+
+	public function author ()
+	{
+		return User::find($this->user_id);
+	}
 }
 
 ?>
