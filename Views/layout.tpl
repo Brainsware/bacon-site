@@ -38,7 +38,7 @@
       <div class="row narrow footer">
         <div>
           <p>
-          The Bacon PHP Framwork is brought to you by <a href="http://brainsware.org">Brainsware</a>
+          The Bacon PHP Framework is brought to you by <a href="http://brainsware.org">Brainsware</a>
           </p>
           <p>
           <a target="_blank" href="http://brainsware.org/imprint.html">Imprint</a>

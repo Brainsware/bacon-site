@@ -27,13 +27,13 @@ html, body {
 }
 
 #footer {
-  color: #f0f0f0;
+  color: #2b2b2b;
   height: 150px;
   padding-top: 10px;
 
   font-size: 14px;
-  background-color: #2b2b2b;
-  border-top: 2px solid #ccc;
+  background-color: #eaeaea;
+  border-top: 2px solid #ddd;
 }
 
 #footer a {
