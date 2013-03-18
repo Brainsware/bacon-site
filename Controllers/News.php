@@ -10,7 +10,6 @@ class News extends Application
 {
 	public function index ()
 	{
-		return; # XXX TODO
 		$this->posts = \Models\Post::order('published_at', 'DESC');
 	}
 
