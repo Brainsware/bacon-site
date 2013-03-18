@@ -13,7 +13,7 @@ Once you have PHP and composer set up, you can create a skeleton project with th
 % composer create-project brainsware/bacon-dist CatBlog
 ```
 
-> **Note:** bacon-dist is used here as bacon itself is only published as a library and would require you to set up a project on your own. 
+> **Note:** `brainsware/bacon-dist` is used here as `brainsware/bacon` itself is only published as a library and would require you to set up a project on your own. 
 
 This will download all the necessary software, and create all important directories and sample configuration files for your new cat blog.
 
