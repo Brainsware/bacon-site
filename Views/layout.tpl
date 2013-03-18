@@ -35,9 +35,8 @@
     </div>
 
     <div id="footer">
-      <div class="row">
-        <div class="onecol"><!-- --></div>
-        <div class="tencol">
+      <div class="row footer">
+        <div>
           <p class="center">
           bacon PHP is brought to you by <a href="http://brainsware.org">brainsware</a>.
           </p>
@@ -46,7 +45,6 @@
           <a href="http://brainsware.org/imprint.html">Imprint</a>
           </p>
         </div>
-        <div class="onecol last"><!-- --></div>
       </div>
     </div>
     <script type="text/javascript">

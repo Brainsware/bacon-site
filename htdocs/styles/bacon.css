@@ -14,7 +14,7 @@ html, body {
 
 #container {
   min-height: 100%;
-  margin: 0 auto -103px;
+  margin: 0 auto -102px;
 }
 
 #footer, #push {
@@ -27,13 +27,20 @@ html, body {
 }
 
 #footer {
-  background-color: #2B2B2B;
-  border-top: 2px solid #E0E0E0;
-  color: white;
+  color: black;
   height: 90px;
-  padding-top: 10px;
+  padding-top: 15px;
 
   font-size: 10pt;
+}
+
+.footer {
+  background-color: #eaeaea;
+  border-top: 1px solid #ccc;
+}
+
+.footer div {
+  padding: 0px 20px;
 }
 
 body {
@@ -58,7 +65,7 @@ p.hero {
 }
 
 a {
-  color: #88513D;
+  color: #892A33;
   text-decoration: none;
 }
 
