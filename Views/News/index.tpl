@@ -11,7 +11,7 @@
       </div>
 
       <div class="teaser fourcol left-aligned">
-        <h3><a href="/articles/getting-started">Download</a></h3>
+        <h3><a href="/articles/download">Download</a></h3>
         Get your own copy
       </div>
 
