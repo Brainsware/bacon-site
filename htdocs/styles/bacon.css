@@ -188,6 +188,7 @@ table tr td {
 }
 
 .blog ul {
-  padding-left: 15px;
   list-style-type: circle;
+  padding-left: 15px;
+  padding-bottom: 15px;
 }
