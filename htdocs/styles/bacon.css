@@ -178,10 +178,6 @@ table tr td {
   padding-left: 15px;
 }
 
-.blog h1 {
-  text-align: center;
-}
-
 .blog article header p {
   font-size: 1em;
   margin: 0px;
@@ -189,6 +185,6 @@ table tr td {
 
 .blog ul {
   list-style-type: circle;
-  padding-left: 15px;
+  padding-left: 40px;
   padding-bottom: 15px;
 }
