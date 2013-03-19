@@ -1,10 +1,10 @@
 ## Creating a new project with Bacon {#create}
 
-The recommended way to download Bacon and start a project with it is by using the `composer create-project` command. You can find that method explained [here](/articles/getting-started#installation).
+The recommended way to download Bacon and start a project with is by using the `composer create-project` command. You can find that method explained [here](/articles/getting-started#installation).
 
 ## Add Bacon to an existing project {#add}
 
-If you however want to add Bacon as dependency to your existing project, you need to add it to your `composer.json` file. Since Bacon is released on [packagist.org](https://packagist.org/packages/brainsware/bacon), all you need to do is add the following to your `require` section:
+If you however want to add Bacon as a dependency to your existing project, you need to add it to your `composer.json` file. Since Bacon is released on [packagist.org](https://packagist.org/packages/brainsware/bacon), all you need to do is add the following to your `require` section:
 
 ```
 {
