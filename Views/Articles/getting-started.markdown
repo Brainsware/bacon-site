@@ -45,8 +45,7 @@ Writing lock file
 Generating autoload files
 ```
 
-We will describe in the [Components Chapter](XXX: Missing Link, components Chapter) each of these pieces of software and how they fit into the overall architecture of Bacon.
-For now let's consider them as opaque building blocks.
+We will describe each of these pieces of software and how they fit into the overall architecture of Bacon later on. For now let's consider them as opaque building blocks.
 
 ## Configuration {#configuration}
 
@@ -73,7 +72,7 @@ The classic project to demonstrate working with a web framework is a blog. We'll
 
 ### Models {#models}
 
-Before anything else, we need a means of retrieving data from the database. In Bacon this is done with models. As with the database configuration, we cannot predict what it should look like, so we don't attempt to do it.
+Before anything else, we need a means of retrieving data from the database. In Bacon this is done with models.
 
 The simplest form of model is a class inheriting from `\Bacon\ORM\Model` in the namespace `\Models` holding a static variable `$table_name` with the table name:
 
