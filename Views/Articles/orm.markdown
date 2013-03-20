@@ -38,7 +38,7 @@ The ORM assumes you have certain columns in place, namely:
 
 * `table_name.id`
 * `table_name.created_at`
-* `table_name.updated`
+* `table_name.updated_at`
 
 The two columns `created_at` and `updated_at` are automatically filled in on creation and update of a row. If you do not want this, e.g. when you have a simple model for a join table, just add the static variable `$timestamps` with the value `false`:
 
