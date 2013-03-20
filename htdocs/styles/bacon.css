@@ -42,6 +42,12 @@ html, body {
 
 #footer a {
   margin: 0px!important;
+
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
 }
 
 #footer h4 {
