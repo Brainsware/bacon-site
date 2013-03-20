@@ -85,6 +85,14 @@ p {
   text-align: justify;
 }
 
+p a {
+  text-decoration: underline;
+}
+
+p a:hover {
+  text-decoration: none;
+}
+
 .hero {
   background-color: #eaeaea;
   padding: 1em;
