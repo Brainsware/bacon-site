@@ -28,8 +28,8 @@
     {% for post in posts %}
     <article>
       <header>
+        <small><time pubdate datetime="{{ post.published_at }}">{{ post.published_at | date('dS \\of F Y') }}</time></small>
         <h2>{{ post.title }}</h2>
-        <p>by <span class="author">{{ post.author.name }}</span> on <time pubdate datetime="{{ post.published_at }}">{{ post.published_at }}</time></p>
       </header>
 
       {{ post.content | markdown }}
