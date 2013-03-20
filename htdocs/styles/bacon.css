@@ -150,12 +150,17 @@ h1, h2, h3, h4 {
 }
 
 pre {
-  width: 820px;
+  color: #ccc;
   background-color: black;
+
+  width: 678px;
   padding: 10px;
   border-radius: 5px;
-  background-color: black;
-  color: #ccc;
+  
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  overflow-x: auto;
 }
 
 p > code {
