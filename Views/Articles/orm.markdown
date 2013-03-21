@@ -2,7 +2,7 @@
 
 ## Configuration {#config}
 
-Bacon automatically looks for the database configuration in `Config/Database.php`.
+Bacon automatically looks for the database configuration in `Config/Database.php`. It must contain a class `Config\Database` with a public static variable called `$main`:
 
 ```
 namespace Config;
@@ -19,10 +19,11 @@ class Database
 }
 ```
 
+> **Note:** If no config is found and you try query the database an exception is thrown.
+
 ## Models {#models}
 
 Say you want to create a model for handling posts in your blog. The simplest form of a model is a class inheriting `\Bacon\ORM\Model` in the namespace `\Models` holding a static variable `$table_name` with the table name.
-
 
 ```
 # Models/Post.php
@@ -34,7 +35,9 @@ class Post extends \Bacon\ORM\Model
 }
 ```
 
-The ORM assumes you have certain columns in place, namely:
+### Timestamp columns {#timestamp-columns}
+
+Further, the ORM assumes you have certain columns in place, namely:
 
 * `table_name.id`
 * `table_name.created_at`
@@ -54,6 +57,8 @@ class Post extends \Bacon\ORM\Model
 }
 ```
 
+### Altering the primary key {#primary-key}
+
 In case you have a different primary key than `id`, you can alter this as well:
 
 ```
@@ -68,7 +73,45 @@ class Post extends \Bacon\ORM\Model
 }
 ```
 
-## Retrieving Data {#retrieving-data}
+## Query Interface {#query-interface}
+
+Bacon tries to provide a very intuitive query interface. The base of this interface is the class `Collection`. When you call any of the model's [query methods](#query-interface-methods), a new `Collection` instance is created. This instance allows you to form a simple query without having to write SQL.
+
+Almost all of the available methods return the `Collection` object itself, giving the opportunity to chain calls to it.
+
+### Available methods {#query-interface-methods}
+
+| Method   | Parameters                                | Return Value                     |
+|:---------|:------------------------------------------|:---------------------------------|
+| `find`   | primary key value                         | Model instance                   |
+| `first`  | *none* (implies `LIMIT 1`)                | Model instance                   |
+| `last`   | *none* (implies `LIMIT 1`)                | Model instance                   |
+| `all`    | *none*                                    | *Loaded* collection instance     |
+| `where`  | string or array                           | *Not loaded* collection instance |
+| `limit`  | integer                                   | *Not loaded* collection instance |
+| `offset` | integer                                   | *Not loaded* collection instance |
+| `order`  | string, string (column name, asc \| desc) | *Not loaded* collection instance |
+| `group`  | string (column name)                      | *Not loaded* collection instance |
+
+### Lazy-loading
+
+The ORM also supports *lazy-loading*. Until you call `all`, `first` or `last`, no query is sent to the database.
+
+```
+# Construct a collection, but do not load anything yet:
+$posts = \Models\Post::where([ 'user_id' => '1' ]);
+
+# Add something to the query:
+if (isset($limit)) {
+  $posts->limit($limit);
+}
+
+# Actually send the query to the database:
+$posts->all();
+```
+
+
+### Examples {#query-interface-examples}
 
 Retrieve a single row with a given primary key value from the database:
 
@@ -96,9 +139,9 @@ $posts = \Models\Post::where('published_at != NULL')
 					 ->all();
 ```
 
-The ORM also sports *lazy-loading*. So until you call `all`, `first` or `last`, no query is sent to the database.
-
 ## Storing Data {#storing-data}
+
+Storing data is as simple as creating a model instance, filling it with data and calling `save()` in order to send data to the database.
 
 ```
 $new_post = new \Models\Post();
@@ -110,11 +153,13 @@ $new_post->save();
 
 ```
 
-Storing contents sent via form or asynchronous request:
+There is no need to make one statement per column, one can pass an associative array of column data (`[ 'column name' => $data ]`)to the constructor as well:
 
 ```
-$new_post = new \Models\Post($this->params->post);
+$new_post = new \Models\Post($post);
 $new_post->save();
 ```
 
 ## Validation & Error Handling {#validation-error-handling}
+
+
