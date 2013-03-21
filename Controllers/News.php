@@ -15,9 +15,14 @@ class News extends Application
 
 	public function show ()
 	{
-		return; # XXX TODO
-		$this->post = \Models\Post::find();
+		try {
+			$this->post = \Models\Post::where([ 'slug' => $this->params->id ])->first();
 
+		} catch (\Exception $e) {
+			return $this->redirect([ '/news' ]);
+		}
+
+		/*
 		$this->enable_comments = true;
 
 		if (class_exists('\Config\Post')) {
@@ -29,8 +34,10 @@ class News extends Application
 			$this->getRecaptcha();
 			$this->comments = Model\Comment::where(array('Post_id' => $id));
 		}
+		 */
 	}
 
+	/*
 	private function getRecaptcha()
 	{
 		$this->enable_recaptcha = Lib\Recaptcha::isEnabled('\Config\Post');
@@ -39,6 +46,7 @@ class News extends Application
 			$this->recaptcha = Lib\Recaptcha::html();
 		}
 	}
+	 */
 }
 
 ?>

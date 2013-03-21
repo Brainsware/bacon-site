@@ -1,32 +1,17 @@
 {% block content %}
-		<div>
-		<h3>{{ post.title }}</h3>
-		{{ post.content | markdown }}
-		</div>
+  <div class="row narrow" style="min-height: 2em;"><!-- --></div>
 
-		{% if enable_comments %}
-			{% if post.comments_enable != 'disabled' %}
-				<h6>Comments</h6>
-				<form action="/comment/create" method="POST">
-					<input type="hidden" name="blag_id" value="{{ post.id }}" />
+  <div class="row narrow blog">
+    <article>
+      <header>
+        <small><time pubdate datetime="{{ post.published_at }}">{{ post.published_at | date('dS \\of F Y') }}</time></small>
+        <h2><a href="/news/{{ post.slug }}/">{{ post.title }}</a></h2>
+      </header>
 
-					<textarea name="comment_content" style="border: 1px solid black;">{{ params.comment_content }}</textarea>
-					<br />
-					{% if enable_recaptcha %}
-						{% if verified == 'false' %}
-							Your recaptcha could not be verified.
-						{% endif %}
+      {{ post.content | markdown }}
 
-						{{ recaptcha | raw }}
-					{% endif %}
-					<br />
-					<input type="submit" name="comment_create" value="Comment" />
-				</form>
-				<ul id="comments">
-					{% for comment in comments %}
-						<li>{{ comment.content }}</li>
-					{% endfor %}
-				</ul>
-			{% endif %}
-		{% endif %}
+      <footer>
+      </footer>
+    </article>
+  </div>
 {% endblock %}

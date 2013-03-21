@@ -29,7 +29,7 @@
     <article>
       <header>
         <small><time pubdate datetime="{{ post.published_at }}">{{ post.published_at | date('dS \\of F Y') }}</time></small>
-        <h2>{{ post.title }}</h2>
+        <h2><a href="/news/{{ post.slug }}/">{{ post.title }}</a></h2>
       </header>
 
       {{ post.content | markdown }}
