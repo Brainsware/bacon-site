@@ -110,4 +110,11 @@ $new_post->save();
 
 ```
 
+Storing contents sent via form or asynchronous request:
+
+```
+$new_post = new \Models\Post($this->params->post);
+$new_post->save();
+```
+
 ## Validation & Error Handling {#validation-error-handling}
