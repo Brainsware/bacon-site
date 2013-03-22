@@ -1,5 +1,7 @@
 @import url('opensans/stylesheet.css');
 
+*:target { background-color: lightyellow; }
+
 html, body {
   height: 100%;
 }
