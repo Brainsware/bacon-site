@@ -81,21 +81,21 @@ Almost all of the available methods return the `Collection` object itself, so on
 
 ### Available methods {#query-interface-methods}
 
-| Method   | Parameters                                | Return Value                     |
-|:---------|:------------------------------------------|:---------------------------------|
-| `find`   | primary key value                         | Model instance                   |
-| `first`  | *none* (implies `LIMIT 1`)                | Model instance                   |
-| `last`   | *none* (implies `LIMIT 1`)                | Model instance                   |
-| `all`    | *none*                                    | *Loaded* collection instance     |
-| `where`  | string or array                           | *Not loaded* collection instance |
-| `limit`  | integer                                   | *Not loaded* collection instance |
-| `offset` | integer                                   | *Not loaded* collection instance |
-| `order`  | string, string (column name, asc \| desc) | *Not loaded* collection instance |
-| `group`  | string (column name)                      | *Not loaded* collection instance |
+| Method   | Parameters                                | Return Value        | Causes SQL to be sent |
+|:---------|:------------------------------------------|:--------------------|:----------------------|
+| `find`   | primary key value                         | Model instance      | Yes                   |
+| `first`  | *none* (implies `LIMIT 1`)                | Model instance      | Yes                   |
+| `last`   | *none* (implies `LIMIT 1`)                | Model instance      | Yes                   |
+| `all`    | *none*                                    | Collection instance | Yes                   |
+| `where`  | string or array                           | Collection instance | No                    |
+| `limit`  | integer                                   | Collection instance | No                    |
+| `offset` | integer                                   | Collection instance | No                    |
+| `order`  | string, string (column name, asc\|desc)   | Collection instance | No                    |
+| `group`  | string (column name)                      | Collection instance | No                    |
 
 ### Lazy-loading {#lazy-loading}
 
-The ORM also supports *lazy-loading*. Until you call `all`, `first` or `last`, no query is sent to the database.
+The ORM also supports *lazy-loading*. Until you call `find`, `all`, `first` or `last`, no query is sent to the database.
 
 ```
 # Construct a collection, but do not load anything yet:
@@ -138,6 +138,18 @@ $posts = \Models\Post::where('published_at != NULL')
 					 ->all();
 ```
 
+Retrieve the first published post:
+
+```
+$post = \Models\Post::where('published_at != NULL')->first();
+```
+
+Retrieve the last published post:
+
+```
+$post = \Models\Post::where('published_at != NULL')->last();
+```
+
 ## Storing Data {#storing-data}
 
 Storing data is as simple as creating a model instance, filling it with data and calling `save()` in order to send data to the database.
@@ -155,6 +167,11 @@ $new_post->save();
 There is no need to make one statement per column, one can pass an associative array of column data (`[ 'column name' => $data ]`)to the constructor as well:
 
 ```
+$post = [
+  'title'   => 'Blog title',
+  'content' => '...'
+];
+
 $new_post = new \Models\Post($post);
 $new_post->save();
 ```
