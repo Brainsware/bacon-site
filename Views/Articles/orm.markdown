@@ -75,9 +75,9 @@ class Post extends \Bacon\ORM\Model
 
 ## Query Interface {#query-interface}
 
-Bacon tries to provide a very intuitive query interface. The base of this interface is the class `Collection`. When you call any of the model's [query methods](#query-interface-methods), a new `Collection` instance is created. This instance allows you to form a simple query without having to write SQL.
+Bacon tries to provide a very intuitive query interface. The base of this interface is the class `Collection`. When you call any of the model's [query methods](#query-interface-methods), a new `Collection` instance is created. This instance allows you to form a simple query without having to write SQL. Once that query is sent and the result is retrieved, `Collection` instantiates one object per row and stores it.
 
-Almost all of the available methods return the `Collection` object itself, giving the opportunity to chain calls to it.
+Almost all of the available methods return the `Collection` object itself, so one may chain calls to it.
 
 ### Available methods {#query-interface-methods}
 
@@ -93,7 +93,7 @@ Almost all of the available methods return the `Collection` object itself, givin
 | `order`  | string, string (column name, asc \| desc) | *Not loaded* collection instance |
 | `group`  | string (column name)                      | *Not loaded* collection instance |
 
-### Lazy-loading
+### Lazy-loading {#lazy-loading}
 
 The ORM also supports *lazy-loading*. Until you call `all`, `first` or `last`, no query is sent to the database.
 
@@ -109,7 +109,6 @@ if (isset($limit)) {
 # Actually send the query to the database:
 $posts->all();
 ```
-
 
 ### Examples {#query-interface-examples}
 
