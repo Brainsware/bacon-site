@@ -73,6 +73,8 @@ class Post extends \Bacon\ORM\Model
 }
 ```
 
+> **Note:** In some cases you might have two or more columns defined as primary key. Although this is possible to do (`$primary_key = 'id, other_id'`), there is no actual support for this right now.
+
 ## Query Interface {#query-interface}
 
 Bacon tries to provide a very intuitive query interface. The base of this interface is the class `Collection`. When you call any of the model's [query methods](#query-interface-methods), a new `Collection` instance is created. This instance allows you to form a simple query without having to write SQL. Once that query is sent and the result is retrieved, `Collection` instantiates one object per row and stores it.
@@ -176,6 +178,55 @@ $new_post = new \Models\Post($post);
 $new_post->save();
 ```
 
+> **Note:** You can only set the column data of the model at hand. Passing cascaded arrays with data of other models included is not supported and thus causing "undefined behaviour".
+
 ## Validation & Error Handling {#validation-error-handling}
 
+To validate data of a model before storing it in database, `\Bacon\ORM\Model` provides a method called `validate()`. To add validations, just override this method.
 
+```
+namespace Models;
+
+class Post extends \Bacon\ORM\Model
+{
+	public static $table_name = 'post';
+
+	public function validate ()
+	{
+		# Check whether the title is set
+		if (empty($this->title)) {
+			throw new \Exception('No title set!');
+		}
+	}
+}
+```
+
+To actually be able to distinguish validation errors from one another and display them accordingly, `Model` also provides an internal error storage including the following methods:
+
+| Name         | Parameters                    | Return value             |
+|:-------------|:------------------------------|:-------------------------|
+| `error`      | string, string (key, message) | *none*                   |
+| `errors`     | *none*                        | `\Sauce\Vector` instance |
+| `has_errors` | *none*                        | `true` or `false`        |
+
+If any errors are present after `validate()` has been called, no data will be written back to the database.
+
+The above example can also be written using the error methods as follows:
+
+```
+namespace Models;
+
+class Post extends \Bacon\ORM\Model
+{
+	public static $table_name = 'post';
+
+	public function validate ()
+	{
+		# Check whether the title is set
+		if (empty($this->title)) {
+			$this->error('title', 'Column `title` may not be empty.');
+		}
+	}
+}
+
+```
