@@ -1,4 +1,4 @@
-# Articles
+# Documentation
 
 These articles try to give a thorough overview on how to use Bacon and explains what is and what is not possible with each part.
 

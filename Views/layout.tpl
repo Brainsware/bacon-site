@@ -23,7 +23,7 @@
         <div class="twelvecol" id="navbar">
           <span><a href="/news">News</a></span>
           <span><a href="/articles/getting-started/">Getting started</a></span>
-          <!--span><a href="/documentation/">Documentation</a></span-->
+          <span><a href="/articles/">Documentation</a></span>
           <!--span><a href="/sauce">Sauce</a></span-->
           <span><a href="/articles/download">Download</a></span>
           <span><a href="/articles/contribute-support">Contribute &amp; Support</a></span>
