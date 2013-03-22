@@ -125,7 +125,7 @@ a:hover {
 }
 
 h1, h2, h3, h4 {
-  margin: 0.4em 0 0.2em 0;
+  margin: 1em 0 0.2em 0;
 }
 
 .center {
@@ -169,7 +169,7 @@ p > code {
 }
 
 blockquote {
-  margin: 1em 0px 0px 40px;
+  margin: 1em 0px 1em 40px;
   padding: 15px;
   background-color: #eaeaea;
 
@@ -184,6 +184,11 @@ blockquote p {
 table tr td {
   padding: 3px 1em 0px 0px;
   border-top: 1px dashed #f0f0f0;
+}
+
+.article table {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 #toc ul {

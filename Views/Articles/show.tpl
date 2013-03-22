@@ -5,7 +5,7 @@
 		    {{ content | markdown | dotoc }}
 	    </div>
 	</div>
-	<div id="howdoido" class="ninecol last">
+	<div id="howdoido" class="ninecol last article">
 		{{ content | markdown }}
 	</div>
 {% endblock %}
