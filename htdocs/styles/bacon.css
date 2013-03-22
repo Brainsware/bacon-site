@@ -203,6 +203,24 @@ table tr td {
   padding-left: 15px;
 }
 
+#toc.affix {
+  position: fixed;
+  top: 0px;
+  max-width: 180px;
+}
+
+#toc-spacer.affix {
+  display: block;
+}
+
+#top-spacer.affix-top {
+  display: none;
+}
+
+#article_content + #toc.affix {
+  background-color: red;
+}
+
 .blog article header p {
   font-size: 1em;
   margin: 0px;

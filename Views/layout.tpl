@@ -4,10 +4,14 @@
     <title>The Bacon PHP Framework {% block subtitle %}{% endblock %}</title>
 
     {% block header %}
-    <link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="/styles/1140.css" />
-    <link rel="stylesheet" type="text/css" href="/styles/bacon.css" />
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Chelsea+Market" />
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif" />
+      <link rel="stylesheet" type="text/css" href="/styles/1140.css" />
+      <link rel="stylesheet" type="text/css" href="/styles/bacon.css" />
+
+      {% for script in [ 'jquery-1.9.1', 'bootstrap' ] %}
+        <script type="text/javascript" src="/scripts/{{ script }}.js"></script>
+      {% endfor %}
     {% endblock %}
   </head>
 	<body>
