@@ -229,6 +229,10 @@ table tr td {
   border-radius: 5px;
 }
 
+.blog article {
+  margin-bottom: 50px;
+}
+
 .blog article header p {
   font-size: 1em;
   margin: 0px;
