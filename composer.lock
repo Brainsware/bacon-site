@@ -60,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Brainsware/php-markdown-extra-extended.git",
-                "reference": "2de3f16ef115f9d2b48bc39a38d407885e9b5b31"
+                "reference": "630b5fb86d4839f4e468b49529e26009863bae0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Brainsware/php-markdown-extra-extended/zipball/2de3f16ef115f9d2b48bc39a38d407885e9b5b31",
-                "reference": "2de3f16ef115f9d2b48bc39a38d407885e9b5b31",
+                "url": "https://api.github.com/repos/Brainsware/php-markdown-extra-extended/zipball/630b5fb86d4839f4e468b49529e26009863bae0b",
+                "reference": "630b5fb86d4839f4e468b49529e26009863bae0b",
                 "shasum": ""
             },
             "require": {
@@ -81,7 +81,7 @@
             "keywords": [
                 "markdown"
             ],
-            "time": "2013-03-16 14:46:13"
+            "time": "2013-03-22 13:22:28"
         },
         {
             "name": "brainsware/sauce",
@@ -174,12 +174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fabpot/Twig.git",
-                "reference": "ba67e2cf8e2ca6cada1de5a316a724df648c52ac"
+                "reference": "0bf57a8c9aacf60dc50b554057ca6cced3a98c00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig/zipball/ba67e2cf8e2ca6cada1de5a316a724df648c52ac",
-                "reference": "ba67e2cf8e2ca6cada1de5a316a724df648c52ac",
+                "url": "https://api.github.com/repos/fabpot/Twig/zipball/0bf57a8c9aacf60dc50b554057ca6cced3a98c00",
+                "reference": "0bf57a8c9aacf60dc50b554057ca6cced3a98c00",
                 "shasum": ""
             },
             "require": {
@@ -215,7 +215,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2013-03-10 07:23:01"
+            "time": "2013-03-22 11:30:55"
         }
     ],
     "packages-dev": [
