@@ -15,7 +15,7 @@ Once you have PHP and composer set up, you can create a skeleton project with th
 
 > **Note:** `brainsware/bacon-dist` is used here as `brainsware/bacon` itself is only published as a library and would require you to set up a project on your own. 
 
-This will download all the necessary software, and create all important directories and sample configuration files for your new cat blog.
+This will download all the necessary packages, and create all important directories and sample configuration files for your new cat blog.
 
 You should see the following output:
 ```
@@ -87,7 +87,7 @@ class Post extends \Bacon\ORM\Model
 }
 ```
 
-This model will provide you with basic functionality for adding, editing, deleting and retrieving entries from the table "post". We'll get back to more indepth discussion of the ORM in its [own chapter](XXX: Missing link: ORM and Models).
+This model will provide you with basic functionality for adding, editing, deleting and retrieving entries from the table "post". We'll get back to more indepth discussion of the ORM in its [own chapter](/articles/orm).
 
 ### Controllers {#controllers}
 
@@ -154,12 +154,12 @@ The callable controller actions are:
 | #show    | /resource/:id      | GET         |
 | #create  | /resource/         | POST        |
 | #edit    | /resource/:id/edit | GET         |
-| #update  | /resource/:id      | PUT (*)     |
-| #destroy | /resource/:id      | DELETE (*)  |
+| #update  | /resource/:id      | PUT [^1]    |
+| #destroy | /resource/:id      | DELETE [^1] |
 
-`:id` is an (almost) arbitrary identifier for a specific resource you wish to access. In our example this could be the cat's name: By calling `/catcontent/new` we can create a new cat profile for a cat named PuffyPaws and `#show` that profile with `/catcontent/PuffyPaws`
+`:id` is an arbitrary identifier for a specific resource you wish to access. In our example this could be the cat's name: By calling `/catcontent/new` we can create a new cat profile for a cat named PuffyPaws and `#show` that profile with `/catcontent/PuffyPaws`
 
-(*) Since browsers only allow GET and POST requests, PUT and DELETE are distinguished from a normal POST request by a parameter called "_method". It may be embedded in a hidden form field or in the URL as GET parameter.
+[^1]: Since browsers only allow GET and POST requests, PUT and DELETE are distinguished from a normal POST request by a parameter called "_method". It may be embedded in a hidden form field or in the URL as GET parameter.
 
 ### Pretty URLs {#front-controller}
 

@@ -77,7 +77,7 @@ class Post extends \Bacon\ORM\Model
 
 ## Query Interface {#query-interface}
 
-Bacon tries to provide a very intuitive query interface. The base of this interface is the class `Collection`. When you call any of the model's [query methods](#query-interface-methods), a new `Collection` instance is created. This instance allows you to form a simple query without having to write SQL. Once that query is sent and the result is retrieved, `Collection` instantiates one object per row and stores it.
+Bacon tries to provide an intuitive query interface. The base of this interface is the class `Collection`. When you call any of the model's [query methods](#query-interface-methods), a new `Collection` instance is created. This instance allows you to form a simple query without having to write SQL. Once that query is sent and the result is retrieved, `Collection` instantiates one object per row and stores it.
 
 Almost all of the available methods return the `Collection` object itself, so one may chain calls to it.
 
