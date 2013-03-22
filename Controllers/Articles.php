@@ -4,6 +4,13 @@ namespace Controllers;
 
 class Articles extends Application
 {
+	public function init ()
+	{
+		$this->fork_us = file_get_contents(APP_ROOT . '/Views/Articles/fork-us.markdown');
+
+		parent::init();
+	}
+
 	public function index ()
 	{
 		$this->content = file_get_contents(APP_ROOT . '/Views/Articles/index.markdown');

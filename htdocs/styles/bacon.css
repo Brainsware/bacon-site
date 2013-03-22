@@ -217,8 +217,16 @@ table tr td {
   display: none;
 }
 
-#article_content + #toc.affix {
-  background-color: red;
+.fork-us p {
+  text-align: center;
+}
+
+.fork-us {
+  margin-top: 4em;
+  padding: 0.5em;
+
+  background-color: #e0e0e0;
+  border-radius: 5px;
 }
 
 .blog article header p {

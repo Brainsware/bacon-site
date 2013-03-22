@@ -10,7 +10,12 @@
 
 	<div id="article-content" class="ninecol last article">
 		{{ content | markdown }}
+
+    <div class="fork-us">
+      {{ fork_us | markdown }}
+    </div>
 	</div>
+
 
   <script type="text/javascript">
     $(document).ready(function () {
