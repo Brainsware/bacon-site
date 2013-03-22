@@ -139,27 +139,25 @@ Views/layout.tpl
 Views/Blag/index.tpl
 ```
 
-
-
 ### Routing {#routing}
 
 URLs map to controllers and their methods in a very specific way. There is no configuration for routing. We prefer the principle of convention over configuration. The base of this convention is the REST principle. A resource maps to a controller and its actions with the HTTP vocabulary. The only thing needed for introducing a new URL is dropping in a new controller with the same name and implement its actions.
 
 The callable controller actions are:
 
-| Action   | URL                | HTTP Method |
-|:---------|:-------------------|:------------|
-| #index   | /resource          | GET         |
-| #new     | /resource/new      | GET         |
-| #show    | /resource/:id      | GET         |
-| #create  | /resource/         | POST        |
-| #edit    | /resource/:id/edit | GET         |
-| #update  | /resource/:id      | PUT [^1]    |
-| #destroy | /resource/:id      | DELETE [^1] |
+| Action   | URL                | HTTP Method          |
+|:---------|:-------------------|:---------------------|
+| #index   | /resource          | GET                  |
+| #new     | /resource/new      | GET                  |
+| #show    | /resource/:id      | GET                  |
+| #create  | /resource/         | POST                 |
+| #edit    | /resource/:id/edit | GET                  |
+| #update  | /resource/:id      | PUT [^put-delete]    |
+| #destroy | /resource/:id      | DELETE [^put-delete] |
 
 `:id` is an arbitrary identifier for a specific resource you wish to access. In our example this could be the cat's name: By calling `/catcontent/new` we can create a new cat profile for a cat named PuffyPaws and `#show` that profile with `/catcontent/PuffyPaws`
 
-[^1]: Since browsers only allow GET and POST requests, PUT and DELETE are distinguished from a normal POST request by a parameter called "_method". It may be embedded in a hidden form field or in the URL as GET parameter.
+[^put-delete]: Since browsers only allow `GET` and `POST` requests, `PUT` and `DELETE` are distinguished from a normal `POST` request by a parameter called `_method`. It may be embedded in a hidden form field or in the URL as `GET` parameter.
 
 ### Pretty URLs {#front-controller}
 
