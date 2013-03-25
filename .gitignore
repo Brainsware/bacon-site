@@ -16,6 +16,7 @@ local.properties
 .settings/
 .loadpath
 vendor/
+cache/
 
 # External tool builders
 .externalToolBuilders/
