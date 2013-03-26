@@ -3,6 +3,11 @@
 	<head>
     <title>The Bacon PHP Framework {% block subtitle %}{% endblock %}</title>
 
+    <meta charset="utf-8" />
+    <meta name="Publisher" content="Brainsware" />
+    <meta name="Description" content="The Bacon PHP Framework" />
+    <meta name="Keywords" content="brainsware, bacon, baconphp, bacon php, framework, php5 framework" />
+
     {% block header %}
       <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Chelsea+Market" />
       <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Serif" />
