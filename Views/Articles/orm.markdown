@@ -10,7 +10,7 @@ namespace Config;
 class Database
 {
 	public static $main = [
-		'server'   => '', # Enter your server host here
+		'host'     => '', # Enter your server host here
 		'name'     => '', # The name of your database
 		'type'     => '', # Anything your PDO Installation supports. (http://www.php.net/manual/en/pdo.drivers.php)
 		'username' => '', # The username you want to connect to your database with
